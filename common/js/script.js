@@ -1,6 +1,6 @@
 var ioc = angular.module('InteractionofColor', ['ngMaterial', 'ngCookies', 'mdColorPicker'])
 
-ioc.controller('Main', function($scope) {
+ioc.controller('Container', function($scope) {
 
 	$scope.color1 = new Object();
 	$scope.color2 = new Object();
@@ -12,38 +12,29 @@ ioc.controller('Main', function($scope) {
 
 	$scope.color1.option = {
 	    default: $scope.color1.color,
-	    hasBackdrop : false
+	    hasBackdrop : false,
+	    clearButton : false
 	};
 
 	$scope.color2.option = {
 	    default: $scope.color2.color,
-	    hasBackdrop : false
+	    hasBackdrop : false,
 	};
 
 	$scope.color3.option = {
 	    default: $scope.color3.color,
-	    hasBackdrop : false
+	    hasBackdrop : false,
 	};
 
-});
 
-
-// realtime color reflection
-$(function(){
-	$(document).on('click','.md-color-picker-preview',function(e){
-	    $('.colorpicker.on').removeClass('on');
-
-	    $(e.target).parents('.colorpicker').addClass('on');
-
-	    // wait for build of colorpicker
-	    console.log($('input.md-color-picker-preview-input').eq(0).val());
-	    $('input.md-color-picker-preview-input').eq(0).change(function() {
-		    var val = $(this).val();
-		 	console.log(val);
-		    // $('p').text(val);
+	// realtime color reflection
+	$(function(){
+		$(document).on('click','.md-color-picker-preview',function(e){
+		    $('.colorpicker.on').removeClass('on');
+		    $(e.target).parents('.colorpicker').addClass('on');
 		});
-	    // $(document).on('change','.md-color-picker-preview-input',function(e){
-	    // 	console.log('c');
-	    // });
 	});
+
 });
+
+

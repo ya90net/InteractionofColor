@@ -743,6 +743,10 @@ angular.module('mdColorPicker', [])
 
 				});
 
+				$scope.$watch( 'value', function() {
+					$('.colorpicker.on .md-color-picker-input').val($scope.value).change();
+				});
+
 				$scope.$watch( 'type', function() {
 					previewInput.removeClass('switch');
 					$timeout(function() {
