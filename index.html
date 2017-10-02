@@ -49,80 +49,65 @@
 
 
 
-    <div class="container">
+    <div class="container" ng-controller="Container">
 
       <!-- 
+      キャンセル時の元に戻す処理
+        初めにどこかに値を保持
+          キャンセルを押したらそれを使う
       Dirk ver
+      ng-repeatの使用
       -->
 
-      <div id="IV" class="row" ng-controller="Main">
+      <div id="IV" class="row" >
 
         <h2>Relativity of Color</h2>
 
-        <div class="pallet d-flex flex-row">
-          <div class="grid">
+        <div class="pallet row">
+          <div class="grid col-4">
             <div class="colorpicker" md-color-picker="color1.option" ng-model="color1.color"></div>
           </div>
-          <div class="grid">
+          <div class="grid col-4">
             <div class="colorpicker" md-color-picker="color2.option" ng-model="color2.color"></div>
           </div>
-          <div class="grid">
+          <div class="grid col-4">
             <div class="colorpicker" md-color-picker="color3.option" ng-model="color3.color"></div>
           </div>
         </div>
 
-        <div class="box1 d-flex flex-row">
-          <div class="color1" ng-style="{'background-color': color1.color}">
-            <div class="color3" ng-style="{'background-color': color3.color}"></div>
+        <div class="box1 row">
+          <div class="color1 col-6" ng-style="{'background-color': color1.color}">
+            <div class="color2" ng-style="{'background-color': color2.color}"></div>
           </div>
-          <div class="color2" ng-style="{'background-color': color2.color}">
-            <div class="color3" ng-style="{'background-color': color3.color}"></div>
+          <div class="color3 col-6" ng-style="{'background-color': color3.color}">
+            <div class="color2" ng-style="{'background-color': color2.color}"></div>
           </div>
-          <style>
-            #IV .box1 {
-              width: 100%;
-              position: relative;
-              overflow: hidden;
-              height: 80vh;
-            }
-            .pallet {
-              width: 100%;
-            }
-            .grid {
-              width: calc(100% / 3);
-            }
-            #IV .box1 .color1 {
-              width: 50%;
-              background-color: #FF3727;
-            }
-            #IV .box1 .color2 {
-              width: 50%;
-              background-color: #26ADE4;
-            }
-            #IV .box1 .color3 {
-              position: relative;
-              left: 50%;
-              top: 50%;
-              transform: translate(-50%, -50%);
-              width: 8%;
-              height: 12vh;
-            }
-          </style>
         </div>
-      </div>
 
-    	<div class="row" >
-
-  			<!-- <div ng-repeat="audio in shelf" class="card_cover col-xl-2 col-lg-3 col-md-4 col-sm-6" ng-show="search(audio)">
-          <div class="card" ng-class="{selected:$index==selectedRow}">
-            <div class="meta">
-      				<div class="name">{{audio.name}}</div>
-      				<div class="cat {{audio.cat}}">{{audio.cat}}</div>
-            </div>
-    				<div id="play{{audio.fileName}}" class="button" ng-mousedown="selected($index)" ng-click="selected($index)">Play</div>
-          </div>
-  			</div> 
- -->
+        <style>
+          #IV .pallet,
+          #IV .box1 {
+            width: 100%;
+            margin: 0;
+          }
+          #IV .box1 {
+            height: 80vh;
+          }
+          #IV .box1 .color2 {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 8%;
+            height: 12vh;
+          }
+          #IV md-input-container {
+            margin-bottom: 0;
+          }
+          #IV .md-color-picker-clear {
+            display: none;
+          }
+        </style>
       </div>
 
     </div>
@@ -133,6 +118,7 @@
 	</footer>
 
 	<!-- lib -->
+  <script src="/common/libs/jquery-3.2.1.min.js"></script>
   <script src="./common/js/wave.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
@@ -149,7 +135,7 @@
   <script src="/common/libs/tinycolor/tinycolor.js"></script>
   <script src="/common/libs/mdColorPicker/mdColorPicker.js"></script>
 
-  <script src="/common/libs/jquery-3.2.1.min.js"></script>
+  
 	<script src="/common/js/script.js"></script>
 
 </body>

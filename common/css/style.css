@@ -9,6 +9,10 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
+*:focus {
+  outline: 0;
+  border-color: transparent;
+}
 body > .container {
   box-sizing: border-box;
   padding: calc(59px + 58px) 15px 60px;

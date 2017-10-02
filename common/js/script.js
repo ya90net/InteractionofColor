@@ -2,18 +2,18 @@ var ioc = angular.module('InteractionofColor', ['ngMaterial', 'ngCookies', 'mdCo
 
 ioc.controller('Container', function($scope) {
 
+	// IV
 	$scope.color1 = new Object();
 	$scope.color2 = new Object();
 	$scope.color3 = new Object();
 
 	$scope.color1.color = "#e63225";
-	$scope.color2.color = "#26ADE4";
-	$scope.color3.color = "#8CC445";
+	$scope.color2.color = "#8CC445";
+	$scope.color3.color = "#26ADE4";
 
 	$scope.color1.option = {
 	    default: $scope.color1.color,
 	    hasBackdrop : false,
-	    clearButton : false
 	};
 
 	$scope.color2.option = {
@@ -25,6 +25,8 @@ ioc.controller('Container', function($scope) {
 	    default: $scope.color3.color,
 	    hasBackdrop : false,
 	};
+
+
 
 
 	// realtime color reflection
