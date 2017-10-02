@@ -28,7 +28,7 @@ body > .container {
   width: 100%;
   background-color: #24292e;
   padding: 0.8rem 1rem;
-  z-index: 3;
+  z-index: 99;
 }
 .navbar-brand{
   position: absolute;
