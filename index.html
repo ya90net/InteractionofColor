@@ -5,629 +5,101 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Interaction of Color</title>
-  <link rel="shortcut icon" href="./favicon.ico">
+	<link rel="shortcut icon" href="./favicon.ico">
 	<!-- Bootstrap -->
-	<link href="./common/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/common/libs/bootstrap//bootstrap.min.css" rel="stylesheet">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
-  <!-- mdColorPicker -->
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-  <link href="/common/libs/mdColorPicker/mdColorPicker.min.css" rel="stylesheet" />
-
+  	<!-- mdColorPicker -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+	<link href="/common/libs/mdColorPicker/mdColorPicker.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="/common/css/style.css">
+	<link rel="stylesheet" href="/common/css/main.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-md ">
-      <a class="navbar-brand" href="">Interaction of Color</a>
+	<nav class="navbar navbar-expand-md ">
+	  <a class="navbar-brand" href="">Interaction of Color</a>
 
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-        <!--   
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li> 
-         -->
-        </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <input type="text" class="form-control mr-sm-2" ng-model="expression" placeholder="Index" aria-label="Filter">
-        </form>
-      </div>
+	  <div class="collapse navbar-collapse" id="navbarCollapse">
+		<ul class="navbar-nav mr-auto">
+		<!--   
+		  <li class="nav-item active">
+			<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">Link</a>
+		  </li> 
+		 -->
+		</ul>
+		<form class="form-inline mt-2 mt-md-0">
+			<input type="text" class="form-control mr-sm-2" ng-model="expression" placeholder="Index" aria-label="Filter">
+		</form>
 
-      <!-- Wave -->
-      <canvas id="wave"></canvas>
+		<ul class="index">
+			<li><a href="/#/">Top</a></li>
+			<li><a href="/#/chapterIV">chapterIV</a></li>
+			<li><a href="/#/chapterV">chapterV</a></li>
+		</ul>
+	  </div>
 
-    </nav>
+	  <!-- Wave -->
+	  <canvas id="wave"></canvas>
 
-
-
-    <div class="container" ng-controller="Container">
-
-      <!-- 
-        
-        章ごとの構造化
-          ng-repeatの使用
-          controller 章ごとに
-          index(サイドバーの導入)
-
-        カラーピッカー
-          - 文字列手打ちした時のバグ対応
-          - rgba / hue 対応
-      
-        Dirk ver
-
-        色調整
-          Pantone を 使う
-
-        形調整
-      
-      -->
-
-      <style>
-          md-input-container {
-            margin-bottom: 0;
-          }
-          .md-color-picker-clear {
-            display: none;
-          }
-      </style>
-
-      <div id="IV" class="row" >
-
-        <h2>A color has many faces --- the relativity of color</h2>
-
-        <!-- IV-0 -->
-        <div class="pallet row">
-          <div class="grid col-4">
-            <div class="colorpicker" md-color-picker="color1.option" ng-model="color1.color"></div>
-          </div>
-          <div class="grid col-4">
-            <div class="colorpicker" md-color-picker="color2.option" ng-model="color2.color"></div>
-          </div>
-          <div class="grid col-4">
-            <div class="colorpicker" md-color-picker="color3.option" ng-model="color3.color"></div>
-          </div>
-        </div>
-
-        <div class="box box1 row">
-          <div class="color1 col-6" ng-style="{'background-color': color1.color}">
-            <div class="color2" ng-style="{'background-color': color2.color}"></div>
-          </div>
-          <div class="color3 col-6" ng-style="{'background-color': color3.color}">
-            <div class="color2" ng-style="{'background-color': color2.color}"></div>
-          </div>
-        </div>
-
-        <style>
-          #IV .pallet,
-          #IV .box {
-            width: 100%;
-            margin: 0;
-          }
-          #IV .box {
-           margin: 0 0 100px; 
-          }
-          #IV .box1 {
-            height: 80vh;
-          }
-          #IV .box1 .color2 {
-            position: relative;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 8%;
-            height: 12vh;
-          }
-        </style>
-
-        <!-- IV-1 -->
-        <div class="pallet row">
-          <div class="col-1"></div>
-          <div class="grid col-2">
-            <div class="colorpicker" md-color-picker="color4.option" ng-model="color4.color"></div>
-          </div>
-          <div class="grid col-2">
-            <div class="colorpicker" md-color-picker="color5.option" ng-model="color5.color"></div>
-          </div>
-          <div class="grid col-2">
-            <div class="colorpicker" md-color-picker="color6.option" ng-model="color6.color"></div>
-          </div>
-          <div class="grid col-2">
-            <div class="colorpicker" md-color-picker="color7.option" ng-model="color7.color"></div>
-          </div>
-          <div class="grid col-2">
-            <div class="colorpicker" md-color-picker="color8.option" ng-model="color8.color"></div>
-          </div>
-        </div>
-
-        <div class="box box2 row">
-          <div class="color4 col-12" ng-style="{'background-color': color4.color}"></div>
-          
-          <div class="color5 col-12" ng-style="{'background-color': color5.color}"></div>
-          <div class="color6 col-12" ng-style="{'background-color': color6.color}"></div>
-          
-          <div class="color7 col-12" ng-style="{'background-color': color7.color}"></div>
-
-          <div class="color8 col-1" ng-style="{'background-color': color8.color}"></div>
-        </div>
-        <style>
-          #IV .box2 {
-            position: relative;
-            height: 80vh;
-          }
-          #IV .box2 .color4,
-          #IV .box2 .color7 {
-            height: 40vh
-          }
-          #IV .box2 .color5,
-          #IV .box2 .color6 {
-            position: absolute;
-            height: 15vh;
-            bottom: 40vh;
-            z-index: 3;
-          }
-          #IV .box2 .color6 {
-            bottom: none;
-            top: 40vh;
-          }
-          #IV .box2 .color8 {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            height: 50vh;
-            z-index: 2;
-          }
-          #IV .box2 .color8:hover{
-            z-index: 4;
-          }
-        </style>
-
-        <!-- IV-3 -->
-        <div class="pallet row">
-          <div class="grid col-4">
-            <div class="colorpicker" md-color-picker="color9.option" ng-model="color9.color"></div>
-          </div>
-          <div class="grid col-4">
-            <div class="colorpicker" md-color-picker="color10.option" ng-model="color10.color"></div>
-          </div>
-          <div class="grid col-4">
-            <div class="colorpicker" md-color-picker="color11.option" ng-model="color11.color"></div>
-          </div>
-        </div>
-
-        <div class="box box3 row">
-          <div class="color9 col-12" ng-style="{'background-color': color9.color}">
-            <div class="color10" ng-style="{'background-color': color10.color}">
-              <div class="row">
-                <div class="col-1"></div>
-                <div class="color9 col-1" ng-style="{'background-color': color9.color}"></div>
-                <div class="col-1"></div>
-                <div class="color9 col-1" ng-style="{'background-color': color9.color}"></div>
-                <div class="col-1"></div>
-                <div class="color9 col-1" ng-style="{'background-color': color9.color}"></div>
-                <div class="col-1"></div>
-                <div class="color9 col-1" ng-style="{'background-color': color9.color}"></div>
-                <div class="col-1"></div>
-                <div class="color9 col-1" ng-style="{'background-color': color9.color}"></div>
-                <div class="col-1"></div>
-              </div>
-
-              <div class="row">
-                <div class="col-1"></div>
-                <div class="color9 col-1" ng-style="{'background-color': color9.color}"></div>
-                <div class="col-1"></div>
-                <div class="color9 col-1" ng-style="{'background-color': color9.color}"></div>
-                <div class="col-1"></div>
-                <div class="color9 col-1" ng-style="{'background-color': color9.color}"></div>
-                <div class="col-1"></div>
-                <div class="color9 col-1" ng-style="{'background-color': color9.color}"></div>
-                <div class="col-1"></div>
-                <div class="color9 col-1" ng-style="{'background-color': color9.color}"></div>
-                <div class="col-1"></div>
-              </div>
-            </div>
-          </div>
-          <div class="color11 col-12" ng-style="{'background-color': color11.color}">
-            <div class="color10" ng-style="{'background-color': color10.color}">
-              <div class="row">
-                <div class="col-1"></div>
-                <div class="color11 col-1" ng-style="{'background-color': color11.color}"></div>
-                <div class="col-1"></div>
-                <div class="color11 col-1" ng-style="{'background-color': color11.color}"></div>
-                <div class="col-1"></div>
-                <div class="color11 col-1" ng-style="{'background-color': color11.color}"></div>
-                <div class="col-1"></div>
-                <div class="color11 col-1" ng-style="{'background-color': color11.color}"></div>
-                <div class="col-1"></div>
-                <div class="color11 col-1" ng-style="{'background-color': color11.color}"></div>
-                <div class="col-1"></div>
-              </div>
-
-              <div class="row">
-                <div class="col-1"></div>
-                <div class="color11 col-1" ng-style="{'background-color': color11.color}"></div>
-                <div class="col-1"></div>
-                <div class="color11 col-1" ng-style="{'background-color': color11.color}"></div>
-                <div class="col-1"></div>
-                <div class="color11 col-1" ng-style="{'background-color': color11.color}"></div>
-                <div class="col-1"></div>
-                <div class="color11 col-1" ng-style="{'background-color': color11.color}"></div>
-                <div class="col-1"></div>
-                <div class="color11 col-1" ng-style="{'background-color': color11.color}"></div>
-                <div class="col-1"></div>
-              </div>              
-            </div>
-          </div>
-        </div>
-
-        <style>
-          #IV .box3 {
-            height: 80vh;
-          }
-          #IV .box3 > .color9,
-          #IV .box3 > .color11 {
-            height: 40vh;
-          }
-          #IV .box3 .color10 {
-            position: relative;
-            left: 10%;
-            top: 8vh;
-            width: 80%;
-            height: 24vh;
-          }
-          #IV .box3 .color10 .row,
-          #IV .box3 .color11 .row {
-            margin: 0 0 0 8.333333%;
-            padding-top: 3vh; 
-          }
-          #IV .box3 .color10 .row .color9,
-          #IV .box3 .color10 .row .color11 {
-            width: 10%;
-            height: 8vh;
-          }
-        </style>
-
-
-        <!-- IV-4 -->
-        <div class="pallet row">
-          <div class="col-1"></div>
-          <div class="grid col-2">
-            <div class="colorpicker" md-color-picker="color12.option" ng-model="color12.color"></div>
-          </div>
-          <div class="grid col-2">
-            <div class="colorpicker" md-color-picker="color13.option" ng-model="color13.color"></div>
-          </div>
-          <div class="grid col-2">
-            <div class="colorpicker" md-color-picker="color14.option" ng-model="color14.color"></div>
-          </div>
-          <div class="grid col-2">
-            <div class="colorpicker" md-color-picker="color15.option" ng-model="color15.color"></div>
-          </div>
-          <div class="grid col-2">
-            <div class="colorpicker" md-color-picker="color16.option" ng-model="color16.color"></div>
-          </div>
-        </div>
-
-        <div class="box box4 row">
-          <div class="color12 col-12" ng-style="{'background-color': color12.color}"></div>
-          <div class="color13 col-12" ng-style="{'background-color': color13.color}"></div>
-          <div class="color14 col-12" ng-style="{'background-color': color14.color}"></div>
-          <div class="color15 col-12" ng-style="{'background-color': color15.color}"></div>
-          <div class="color16 col-4" ng-style="{'background-color': color16.color}"></div>
-        </div>
-
-        <style>
-          #IV .box4 {
-            position: relative;
-            height: 80vh;
-            font-size: 0;
-          }
-          #IV .box4 .color12 {
-            height: 20vh;
-          }
-          #IV .box4 .color13 {
-            height: 10vh;
-            z-index: 3;
-          }
-          #IV .box4 .color14 {
-            height: 30vh;
-            z-index: 3;
-          }
-          #IV .box4 .color15 {
-            height: 20vh;
-          }
-          #IV .box4 .color16 {
-            position: absolute;
-            height: 60vh;
-            left: 30%;
-            top: 10vh;
-            transform: rotateZ(4deg);
-            z-index: 2;
-          }
-          #IV .box4 .color16:hover{
-            z-index: 4;
-          }
-        </style>
-
-      <div id="V" class="row" >
-        <h2>Ligiter and / or darker --- light intensity, lightness</h2>
-
-        <!-- V-0 -->
-        <div class="pallet row">
-          <div class="col-1"></div>
-          <div class="grid col-4">
-            <div class="colorpicker" md-color-picker="color2_1.option" ng-model="color2_1.color"></div>
-          </div>
-          <div class="col-1"></div>
-          <div class="col-1"></div>
-          <div class="grid col-4">
-            <div class="colorpicker" md-color-picker="color2_2.option" ng-model="color2_2.color"></div>
-          </div>
-        </div>
-
-        <div class="box box1 row">
-          <div class="color2_1 " ng-style="{'background-color': color2_1.color}"></div>
-          <div class="color2_2 " ng-style="{'background-color': color2_2.color}"></div>
-        </div>
-
-        <style>
-          #V .pallet,
-          #V .box {
-            width: 100%;
-            margin: 0;
-          }
-          #V .box {
-           margin: 0 0 100px; 
-          }
-          #V .box1 {
-            height: 100vh;
-            width: 100%;
-            margin: 0 0 200px; 
-            text-align: center;
-          }
-          #V .box1 .color2_1,
-          #V .box1 .color2_2 {
-            position: absolute;
-            width: 25vw;
-            height: 25vw;
-            padding: 0;
-            margin: 20vh 0 0;
-            transform: rotate(45deg);
-            transform-origin: center;
-          }
-          #V .box1 .color2_1 {
-            left: 16%;
-          }
-          #V .box1 .color2_2 {
-            right: 16%;
-          }
-          #V .box1 .color2_1 {
-            left: 16%;
-          }
-          #V .box1:hover .color2_2 {
-            right: 36%;
-          }
-        </style>
-
-
-        <!-- V-1 -->
-        <div class="pallet row">
-          <div class="grid col-4">
-            <div class="colorpicker" md-color-picker="color2_3.option" ng-model="color2_3.color"></div>
-          </div>
-          <div class="grid col-4">
-            <div class="colorpicker" md-color-picker="color2_4.option" ng-model="color2_4.color"></div>
-          </div>
-          <div class="grid col-4">
-            <div class="colorpicker" md-color-picker="color2_5.option" ng-model="color2_5.color"></div>
-          </div>
-        </div>
-
-        <div class="box box2 row" ng-style="{'background': 'linear-gradient(90deg,'+color2_3.color+','+color2_5.color+')' }">
-          <div class="color2_4" ng-style="{'background-color': color2_4.color}"></div>
-        </div>
-
-        <style>
-          #V .box2 {
-            height: 75vh;
-            width: 100%;
-          }
-          #V .box2 .color2_4{
-            position: absolute;
-            top: 30vh;
-            left: 10%;
-            width: 80%;
-            height: 15vh;
-            padding: 0;
-          }
-        </style>
-
-        <!-- V-2 -->
-        <div class="pallet row">
-          <div class="grid col-4">
-            <div class="colorpicker" md-color-picker="color2_6.option" ng-model="color2_6.color"></div>
-          </div>
-          <div class="grid col-4">
-            <div class="colorpicker" md-color-picker="color2_7.option" ng-model="color2_7.color"></div>
-          </div>
-          <div class="grid col-4">
-            <div class="colorpicker" md-color-picker="color2_8.option" ng-model="color2_8.color"></div>
-          </div>
-        </div>
-
-        <div class="box box3" ng-style="{'background': 'linear-gradient(90deg,'+color2_6.color+','+color2_8.color+')' }">
-          <div class="color2_7" ng-style="{'background-color': color2_7.color}"></div>
-          <div class="color2_7" ng-style="{'background-color': color2_7.color}"></div>
-          <div class="color2_7" ng-style="{'background-color': color2_7.color}"></div>
-        </div>
-
-        <style>
-          #V .box3 {
-            height: 85vh;
-            width: 100%;
-          }
-          #V .box3 .color2_7{
-            position: relative;
-            top: 10vh;
-            left: 10%;
-            width: 80%;
-            height: 15vh;
-            margin: 0 0 10vh;
-          }
-        </style>
-
-        <!-- V-3 -->
-        <div class="pallet pallet4 row">
-          <div class="col-2"></div>
-          <div class="grid col-1">
-            <div class="colorpicker" md-color-picker="color2_9.option" ng-model="color2_9.color"></div>
-          </div>
-          <div class="grid col-1">
-            <div class="colorpicker" md-color-picker="color2_10.option" ng-model="color2_10.color"></div>
-          </div>
-          <div class="grid col-1">
-            <div class="colorpicker" md-color-picker="color2_11.option" ng-model="color2_11.color"></div>
-          </div>
-          <div class="grid col-1">
-            <div class="colorpicker" md-color-picker="color2_12.option" ng-model="color2_12.color"></div>
-          </div>
-          <div class="grid col-1">
-            <div class="colorpicker" md-color-picker="color2_13.option" ng-model="color2_13.color"></div>
-          </div>
-          <div class="grid col-1">
-            <div class="colorpicker" md-color-picker="color2_14.option" ng-model="color2_14.color"></div>
-          </div>
-          <div class="grid col-1">
-            <div class="colorpicker" md-color-picker="color2_13.option" ng-model="color2_15.color"></div>
-          </div>
-          <div class="grid col-1">
-            <div class="colorpicker" md-color-picker="color2_14.option" ng-model="color2_16.color"></div>
-          </div>
-        </div>
-
-        <div class="box box4 row" >
-          <div class="col-2"></div>
-          <div class="color2_9 col-1" ng-style="{'background-color': color2_9.color}"></div>
-          <div class="color2_10 col-1" ng-style="{'background-color': color2_10.color}"></div>
-          <div class="color2_11 col-1" ng-style="{'background-color': color2_11.color}"></div>
-          <div class="color2_12 col-1" ng-style="{'background-color': color2_12.color}"></div>
-          <div class="color2_13 col-1" ng-style="{'background-color': color2_13.color}"></div>
-          <div class="color2_14 col-1" ng-style="{'background-color': color2_14.color}"></div>
-          <div class="color2_15 col-1" ng-style="{'background-color': color2_15.color}"></div>
-          <div class="color2_16 col-1" ng-style="{'background-color': color2_16.color}"></div>
-        </div>
-
-        <style>
-          #V .box4 {
-            height: 85vh;
-            width: 100%;
-            padding-top: 10vh;
-          }
-          #V .box4 div{
-            position: relative;
-            height: 40vh;
-          }
-          
-          #V .box4 .color2_9  { top:   0vh;   transform: rotate(-2deg); z-index: 2;}
-          #V .box4 .color2_10 { top:   5vh;   transform: rotate(-4deg); z-index: 1;}
-          #V .box4 .color2_11 { top: -10vh;   transform: rotate( 0deg); z-index: 2;}
-          #V .box4 .color2_12 { top:   0vh;   transform: rotate(10deg); z-index: 3;}
-          #V .box4 .color2_13 { top:  -5vh;   transform: rotate( 2deg); z-index: 4;}
-          #V .box4 .color2_14 { top:   5vh;   transform: rotate( 0deg); z-index: 3;}
-          #V .box4 .color2_15 { top:   2.5vh; transform: rotate(-2deg); z-index: 2;}
-          #V .box4 .color2_16 { top:   1vh;   transform: rotate( 2deg); z-index: 1;}
-
-          #V .pallet4 md-input-container {
-            width: 0;
-            opacity: 0;
-          }
-        </style>
-
-
-        <!-- V-4 -->
-        <div class="pallet pallet5 row">
-          <div class="col-2"></div>
-          <div class="grid col-1">
-            <div class="colorpicker" md-color-picker="color2_17.option" ng-model="color2_17.color"></div>
-          </div>
-          <div class="grid col-1">
-            <div class="colorpicker" md-color-picker="color2_18.option" ng-model="color2_18.color"></div>
-          </div>
-          <div class="grid col-1">
-            <div class="colorpicker" md-color-picker="color2_19.option" ng-model="color2_19.color"></div>
-          </div>
-          <div class="grid col-1">
-            <div class="colorpicker" md-color-picker="color2_20.option" ng-model="color2_20.color"></div>
-          </div>
-          <div class="grid col-1">
-            <div class="colorpicker" md-color-picker="color2_21.option" ng-model="color2_21.color"></div>
-          </div>
-          <div class="grid col-1">
-            <div class="colorpicker" md-color-picker="color2_22.option" ng-model="color2_22.color"></div>
-          </div>
-          <div class="grid col-1">
-            <div class="colorpicker" md-color-picker="color2_23.option" ng-model="color2_23.color"></div>
-          </div>
-          <div class="grid col-1">
-            <div class="colorpicker" md-color-picker="color2_24.option" ng-model="color2_24.color"></div>
-          </div>
-        </div>
-
-        <div class="box box4 row" >
-          <div class="col-2"></div>
-          <div class="color2_17 col-1" ng-style="{'background-color': color2_17.color}"></div>
-          <div class="color2_18 col-1" ng-style="{'background-color': color2_18.color}"></div>
-          <div class="color2_19 col-1" ng-style="{'background-color': color2_19.color}"></div>
-          <div class="color2_20 col-1" ng-style="{'background-color': color2_20.color}"></div>
-          <div class="color2_21 col-1" ng-style="{'background-color': color2_21.color}"></div>
-          <div class="color2_22 col-1" ng-style="{'background-color': color2_22.color}"></div>
-          <div class="color2_23 col-1" ng-style="{'background-color': color2_23.color}"></div>
-          <div class="color2_24 col-1" ng-style="{'background-color': color2_24.color}"></div>
-        </div>
-
-        <style>
-          #V .box4 {
-            height: 85vh;
-            width: 100%;
-            padding-top: 10vh;
-          }
-          #V .box4 div{
-            position: relative;
-            height: 40vh;
-          }
-          
-          #V .box4 .color2_17 { top:   0vh;   transform: rotate( 4deg); z-index: 4;}
-          #V .box4 .color2_18 { top:   2vh;   transform: rotate( 0deg); z-index: 5;}
-          #V .box4 .color2_19 { top:   5vh;   transform: rotate(-2deg); z-index: 4;}
-          #V .box4 .color2_20 { top:   4vh;   transform: rotate( 5deg); z-index: 3;}
-          #V .box4 .color2_21 { top:  -5vh;   transform: rotate( 0deg); z-index: 2;}
-          #V .box4 .color2_22 { top:   1vh;   transform: rotate( 0deg); z-index: 1;}
-          #V .box4 .color2_23 { top:   1.5vh; transform: rotate( 4deg); z-index: 2;}
-          #V .box4 .color2_24 { top:   2vh;   transform: rotate(-2deg); z-index: 1;}
-
-          #V .pallet5 md-input-container {
-            width: 0;
-            opacity: 0;
-          }
-        </style>
-
-      </div>
-      </div>
+	</nav>
 
 
 
+	<div class="container" >
 
-      </div>
-    </div>
+	  <!-- 
+
+		プロジェクトの構造化
+		  参考：
+		  	https://qiita.com/armorik83/items/5ad850b78e5893d41570
+
+		sass
+		pug
+		coffee の導入
+		  ファイルを統合する
+
+
+		カラーピッカー
+		  - 文字列手打ちした時のバグ対応
+		  - 欄外クリック -> 次選択で反応してしまう
+		  - rgba / hue 対応
+
+		URL#なしに変更
+			- modrewriteの設定
+			http://dim5.net/angularjs/url-reload-mod-rewrite.html
+	  
+	  	サイドバーの導入
+
+	  	jQueryの処理をディレクティブ（命令）に変えて見る
+
+		Dirk ver
+
+		色調整
+		  Pantone を 使う
+
+		形調整
+
+
+	  
+	  -->
+
+	  <div ng-view></div>
+
+
+	</div>
+
+
+
 
 
 	<footer class="footer">
@@ -635,24 +107,27 @@
 	</footer>
 
 	<!-- lib -->
-  <script src="/common/libs/jquery-3.2.1.min.js"></script>
-  <script src="/common/js/wave.js"></script>
+  	<script src="/common/libs/jquery-3.2.1.min.js"></script>
+  	<script src="/common/js/wave.js"></script>
 
 	<script src="/common/libs/angular.min.js"></script>
-  <!-- For mdColorPicker -->
-    <!-- AngularJS Library -->
-  <script src="/common/libs/angular-animate.min.js"></script>
-  <script src="/common/libs/angular-aria.min.js"></script>
-  <script src="/common/libs/angular-messages.min.js"></script>
-  <script src="/common/libs/angular-cookies.js"></script>
-    <!-- AngularJS Material -->
-  <script src="/common/libs/angular-material.min.js"></script>
-    <!-- Tinycolor.js -->
-  <script src="/common/libs/tinycolor/tinycolor.js"></script>
-  <script src="/common/libs/mdColorPicker/mdColorPicker.js"></script>
+  	<!-- For mdColorPicker -->
+		<!-- AngularJS Library -->
+		<script src="/common/libs/angular-route.min.js"></script>
+  		<script src="/common/libs/angular-animate.min.js"></script>
+  		<script src="/common/libs/angular-aria.min.js"></script>
+  		<script src="/common/libs/angular-messages.min.js"></script>
+  		<script src="/common/libs/angular-cookies.js"></script>
+		<!-- AngularJS Material -->
+  		<script src="/common/libs/angular-material.min.js"></script>
+		<!-- Tinycolor.js -->
+  		<script src="/common/libs/tinycolor/tinycolor.js"></script>
+  		<script src="/common/libs/mdColorPicker/mdColorPicker.js"></script>
 
-  
-	<script src="/common/js/script.js"></script>
+  <script src="/common/js/app/app.js"></script>
+  <script src="/common/js/app/services/colorpicker.js"></script>
+  <script src="/common/js/app/controllers/chapterIV.js"></script>
+  <script src="/common/js/app/controllers/chapterV.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,106 @@
+<!-- chapterV -->
+<div id="chapterV" class="chapter row" ng-controller="ChapterV">
+<h2>Ligiter and / or darker --- light intensity, lightness</h2>
+
+<!-- plate1 -->
+<div class="plate1 plate">
+	<div class="pallet row">
+	  <div class="col-1"></div>
+	  <div class="col-4">
+		<div class="colorpicker" md-color-picker="plate1.color1.option" ng-model="plate1.color1.color"></div>
+	  </div>
+	  <div class="col-1"></div>
+	  <div class="col-1"></div>
+	  <div class="col-4">
+		<div class="colorpicker" md-color-picker="plate1.color2.option" ng-model="plate1.color2.color"></div>
+	  </div>
+	</div>
+
+	<div class="illustration row">
+
+		<div ng-repeat="color in plate1" class="color{{$index+1}}" ng-style="{'background-color': color.color}"></div>
+	
+	</div>
+</div>
+<!-- plate1 -->
+
+
+<!-- plate2 -->
+<div class="plate2 plate">
+	<div class="pallet row">
+
+		<div class="col-4" ng-repeat="color in plate2">
+			<div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
+	  	</div>
+
+	</div>
+
+	<div class="illustration row" ng-style="{'background': 'linear-gradient(90deg,'+plate2.color1.color+','+plate2.color3.color+')' }">
+		<div class="color2" ng-style="{'background-color': plate2.color2.color}"></div>
+	</div>
+</div>
+<!-- plate2 -->
+
+
+<!-- plate3 -->
+<div class="plate3 plate">
+	<div class="pallet row">
+
+		<div class="col-4" ng-repeat="color in plate3">
+			<div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
+	  	</div>
+
+	</div>
+
+	<div class="illustration" ng-style="{'background': 'linear-gradient(90deg,'+plate3.color1.color+','+plate3.color3.color+')' }">
+
+	  <div ng-repeat="i in [0, 1, 2]" class="color2" ng-style="{'background-color': plate3.color2.color}"></div>
+
+	</div>
+</div>
+<!-- plate3 -->
+
+
+<!-- plate4 -->
+<div class="plate4 plate">
+	<div class="pallet pallet4 row">
+	  <div class="col-2"></div>
+
+	  <div class="col-1" ng-repeat="color in plate4">
+		<div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
+	  </div>
+	  
+	</div>
+
+	<div class="illustration row" >
+	  <div class="col-2"></div>
+
+	  <div ng-repeat="color in plate4" class="color{{$index+1}} col-1" ng-style="{'background-color': color.color}"></div>
+
+	</div>
+</div>
+<!-- plate4 -->
+
+
+<!-- plate5 -->
+<div class="plate5 plate">
+	<div class="pallet pallet5 row">
+	  <div class="col-2"></div>
+
+	  <div class="col-1" ng-repeat="color in plate5">
+		<div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
+	  </div>
+
+	</div>
+
+	<div class="illustration row" >
+	  	<div class="col-2"></div>
+
+	  	<div ng-repeat="color in plate5" class="color{{$index+1}} col-1" ng-style="{'background-color': color.color}"></div>
+
+	</div>
+</div>
+<!-- plate5 -->
+
+</div>
+<!-- chapterV -->

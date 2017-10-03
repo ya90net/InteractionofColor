@@ -1,0 +1,90 @@
+/* plate1 */
+#chapterIV .plate1 .illustration .color2 {
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 8%;
+	height: 12vh;
+}
+
+
+/* plate2 */
+#chapterIV .plate2 .illustration .color1,
+#chapterIV .plate2 .illustration .color4 {
+	height: 40vh
+}
+#chapterIV .plate2 .illustration .color2,
+#chapterIV .plate2 .illustration .color3 {
+  position: absolute;
+  height: 15vh;
+  bottom: 40vh;
+  z-index: 3;
+}
+#chapterIV .plate2 .illustration .color3 {
+  bottom: none;
+  top: 40vh;
+}
+#chapterIV .plate2 .illustration .color5 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 50vh;
+  z-index: 2;
+}
+#chapterIV .plate2 .illustration .color5:hover{
+  z-index: 4;
+}
+
+
+/* plate3 */
+#chapterIV .plate3 .illustration > .color1,
+#chapterIV .plate3 .illustration > .color3 {
+  height: 40vh;
+}
+#chapterIV .plate3 .illustration .color2 {
+  position: relative;
+  left: 10%;
+  top: 8vh;
+  width: 80%;
+  height: 24vh;
+}
+#chapterIV .plate3 .illustration .color2 .row,
+#chapterIV .plate3 .illustration .color3 .row {
+  margin: 0 0 0 8.333333%;
+  padding-top: 3vh; 
+}
+#chapterIV .plate3 .illustration .color2 .row .color1,
+#chapterIV .plate3 .illustration .color2 .row .color3 {
+  width: 10%;
+  height: 8vh;
+}
+
+
+/* plate4 */
+#chapterIV .plate4 .illustration .color1 {
+  height: 20vh;
+}
+#chapterIV .plate4 .illustration .color2 {
+  height: 10vh;
+  z-index: 3;
+}
+#chapterIV .plate4 .illustration .color3 {
+  height: 30vh;
+  z-index: 3;
+}
+#chapterIV .plate4 .illustration .color4 {
+  height: 20vh;
+}
+#chapterIV .plate4 .illustration .color5 {
+  position: absolute;
+  height: 60vh;
+  left: 30%;
+  top: 10vh;
+  transform: rotateZ(4deg);
+  z-index: 2;
+}
+#chapterIV .plate4 .illustration .color5:hover{
+  z-index: 4;
+}
