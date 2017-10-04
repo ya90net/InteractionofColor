@@ -9,6 +9,9 @@
   outline: 0;
   border-color: transparent;
 }
+body, html {
+    background: #fff;
+}
 body > .container {
   box-sizing: border-box;
   padding: calc(59px + 58px) 15px 60px;

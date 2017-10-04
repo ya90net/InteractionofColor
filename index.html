@@ -45,6 +45,7 @@
 			<li><a href="/#/">Top</a></li>
 			<li><a href="/#/chapterIV">chapterIV</a></li>
 			<li><a href="/#/chapterV">chapterV</a></li>
+			<li><a href="/#/chapterVI">chapterVI</a></li>
 		</ul>
 	  </div>
 
@@ -57,6 +58,7 @@
 
 	<div class="container" >
 
+		<div ng-view></div>
 	  <!-- 
 
 		プロジェクトの構造化
@@ -68,11 +70,13 @@
 		coffee の導入
 		  ファイルを統合する
 
-
 		カラーピッカー
 		  - 文字列手打ちした時のバグ対応
 		  - 欄外クリック -> 次選択で反応してしまう
 		  - rgba / hue 対応
+
+		混色
+			https://gka.github.io/chroma.js/
 
 		URL#なしに変更
 			- modrewriteの設定
@@ -84,17 +88,15 @@
 
 		Dirk ver
 
-		色調整
-		  Pantone を 使う
-
-		形調整
-
-
-	  
+		調整
+			形の調整
+				必要なところはJS
+			色調整
+		  		Pantone を 使う
+		  		  
 	  -->
 
-	  <div ng-view></div>
-
+	  
 
 	</div>
 
@@ -124,10 +126,11 @@
   		<script src="/common/libs/tinycolor/tinycolor.js"></script>
   		<script src="/common/libs/mdColorPicker/mdColorPicker.js"></script>
 
-  <script src="/common/js/app/app.js"></script>
-  <script src="/common/js/app/services/colorpicker.js"></script>
-  <script src="/common/js/app/controllers/chapterIV.js"></script>
-  <script src="/common/js/app/controllers/chapterV.js"></script>
+	<script src="/common/js/app/app.js"></script>
+	<script src="/common/js/app/services/colorpicker.js"></script>
+	<script src="/common/js/app/controllers/chapterIV.js"></script>
+	<script src="/common/js/app/controllers/chapterV.js"></script>
+	<script src="/common/js/app/controllers/chapterVI.js"></script>
 
 </body>
 </html>

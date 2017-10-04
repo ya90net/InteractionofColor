@@ -15,6 +15,9 @@ angular.module('InteractionofColor', ['ngRoute', 'ngMaterial', 'ngCookies', 'mdC
 		.when("/chapterV/", {
 			templateUrl: dir + "chapterV.html"
 		})
+		.when("/chapterVI/", {
+			templateUrl: dir + "chapterVI.html"
+		})
 		.otherwise({
 			redirectTo : "/"
 		});
