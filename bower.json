@@ -24,6 +24,12 @@
         "dist/css/bootstrap.css",
         "dist/js/bootstrap.js"
       ]
+    },
+    "md-color-picker": {
+      "main": [
+        "dist/mdColorPicker.min.css",
+        "dist/mdColorPicker.js"
+      ]
     }
   }  
 }
