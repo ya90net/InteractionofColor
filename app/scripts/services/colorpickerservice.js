@@ -24,10 +24,12 @@ angular.module('interactionofColorApp')
 
 	var realtimeColorReflection = function (){
 		$(document).on('click','.md-color-picker-preview',function(e){
-		    $('.colorpicker.on').removeClass('on');
-		    $(e.target).parents('.colorpicker').addClass('on');
-		    var val = $('.colorpicker.on .md-color-picker-input').val();
-		    $('.colorpicker.on .md-color-picker-input').attr('data-cansel', val);
+			if ( $(e.target).hasClass('md-color-picker-result') ) {
+			    $('.colorpicker.on').removeClass('on');
+			    $(e.target).parents('.colorpicker').addClass('on');
+			    var val = $('.colorpicker.on .md-color-picker-input').val();
+			    $('.colorpicker.on .md-color-picker-input').attr('data-cansel', val);
+			}
 		});
 		// 画面外を押して閉じる -> 次回開いた時に色が反映されないようにこのタイミングでも .on を消す
 		$(document).on('click','.md-dialog-container',function(e){

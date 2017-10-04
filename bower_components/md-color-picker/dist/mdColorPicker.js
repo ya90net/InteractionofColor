@@ -691,7 +691,8 @@ angular.module('mdColorPicker', [])
 				});
 
 				$scope.$watch( 'value', function() {
-					$('.colorpicker.on .md-color-picker-input').val($scope.value).change();
+					var target = $('.colorpicker.on .md-color-picker-input');
+					target.val($scope.value).change();
 				});
 
 				$scope.$watch( 'type', function() {
@@ -885,7 +886,7 @@ angular.module('mdColorPicker', [])
 							};
 							$scope.ok = function ok()
 							{
-								$('.colorpicker.on').removeClass('on');								
+								$('.colorpicker.on').removeClass('on');						
 								$mdDialog.hide( $scope.value );
 							};
 							$scope.hide = $scope.ok;
