@@ -690,6 +690,10 @@ angular.module('mdColorPicker', [])
 
 				});
 
+				$scope.$watch( 'value', function() {
+					$('.colorpicker.on .md-color-picker-input').val($scope.value).change();
+				});
+
 				$scope.$watch( 'type', function() {
 					previewInput.removeClass('switch');
 					$timeout(function() {
@@ -874,10 +878,14 @@ angular.module('mdColorPicker', [])
 							//console.log( "DIALOG CONTROLLER OPEN", Date.now() - dateClick );
 							$scope.close = function close()
                             {
+                            	var val = $('.colorpicker.on .md-color-picker-input').attr('data-cansel');
+								$('.colorpicker.on .md-color-picker-input').val(val).change();
+								$('.colorpicker.on').removeClass('on');
 								$mdDialog.cancel();
 							};
 							$scope.ok = function ok()
 							{
+								$('.colorpicker.on').removeClass('on');								
 								$mdDialog.hide( $scope.value );
 							};
 							$scope.hide = $scope.ok;
