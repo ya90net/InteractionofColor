@@ -1,0 +1,21 @@
+.chapter {
+  .plate, .pallet, .illustration {
+    position: relative;
+    width: 100%;
+    margin: 0;
+  }
+  .plate {
+    margin: 0 0 100px;
+    .pallet {
+      md-input-container {
+        margin-bottom: 0;
+      }
+      .md-color-picker-clear {
+        display: none;
+      }
+    }
+    .illustration {
+      height: 80vh;
+    }
+  }
+}

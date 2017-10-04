@@ -1,0 +1,158 @@
+#chapterV {
+  .plate1 .illustration {
+    height: 100vh;
+    margin: 0 0 200px;
+    text-align: center;
+    .color1, .color2 {
+      position: absolute;
+      width: 25vw;
+      height: 25vw;
+      padding: 0;
+      margin: 20vh 0 0;
+      transform: rotate(45deg);
+      transform-origin: center;
+    }
+    .color1 {
+      left: 16%;
+    }
+    .color2 {
+      right: 16%;
+    }
+    .color1 {
+      left: 16%;
+    }
+    &:hover .color2 {
+      right: 36%;
+    }
+  }
+  .plate2 .illustration {
+    height: 75vh;
+    .color2 {
+      position: absolute;
+      top: 30vh;
+      left: 10%;
+      width: 80%;
+      height: 15vh;
+      padding: 0;
+    }
+  }
+  .plate3 .illustration {
+    height: 85vh;
+    .color2 {
+      position: relative;
+      top: 10vh;
+      left: 10%;
+      width: 80%;
+      height: 15vh;
+      margin: 0 0 10vh;
+    }
+  }
+  .plate4 {
+    .illustration {
+      height: 85vh;
+      padding-top: 10vh;
+      div {
+        position: relative;
+        height: 40vh;
+      }
+      .color1 {
+        top: 0vh;
+        transform: rotate(-2deg);
+        z-index: 2;
+      }
+      .color2 {
+        top: 5vh;
+        transform: rotate(-4deg);
+        z-index: 1;
+      }
+      .color3 {
+        top: -10vh;
+        transform: rotate(0deg);
+        z-index: 2;
+      }
+      .color4 {
+        top: 0vh;
+        transform: rotate(10deg);
+        z-index: 3;
+      }
+      .color5 {
+        top: -5vh;
+        transform: rotate(2deg);
+        z-index: 4;
+      }
+      .color6 {
+        top: 5vh;
+        transform: rotate(0deg);
+        z-index: 3;
+      }
+      .color7 {
+        top: 2.5vh;
+        transform: rotate(-2deg);
+        z-index: 2;
+      }
+      .color8 {
+        top: 1vh;
+        transform: rotate(2deg);
+        z-index: 1;
+      }
+    }
+    .pallet md-input-container {
+      width: 0;
+      opacity: 0;
+    }
+  }
+  .plate5 {
+    .illustration {
+      height: 85vh;
+      padding-top: 10vh;
+      div {
+        position: relative;
+        height: 40vh;
+      }
+    }
+    .color1 {
+      top: 0vh;
+      transform: rotate(4deg);
+      z-index: 4;
+    }
+    .color2 {
+      top: 2vh;
+      transform: rotate(0deg);
+      z-index: 5;
+    }
+    .color3 {
+      top: 5vh;
+      transform: rotate(-2deg);
+      z-index: 4;
+    }
+    .color4 {
+      top: 4vh;
+      transform: rotate(5deg);
+      z-index: 3;
+    }
+    .color5 {
+      top: -5vh;
+      transform: rotate(0deg);
+      z-index: 2;
+    }
+    .color6 {
+      top: 1vh;
+      transform: rotate(0deg);
+      z-index: 1;
+    }
+    .color7 {
+      top: 1.5vh;
+      transform: rotate(4deg);
+      z-index: 2;
+    }
+    .color8 {
+      top: 2vh;
+      transform: rotate(-2deg);
+      z-index: 1;
+    }
+    .pallet md-input-container {
+      width: 0;
+      opacity: 0;
+    }
+  }
+}
