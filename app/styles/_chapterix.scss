@@ -1,0 +1,117 @@
+#chapterIX {
+
+  .plate1 {
+    .illustration {
+      .color1 {
+        height: 45vh;
+      }
+
+      .color3 {
+        position: absolute;
+        width: calc(60% / 2);
+        height: 45vh;
+        transform: rotate(90deg);
+        transform-origin: left;
+        left: 50%;
+      }
+      .color2 {
+        position: absolute;
+        left: 50%;
+        top: 22.5vh;
+        width: 45vh;
+        height: 22.5vh;
+        transform: translateX(-50%);
+      }
+    }    
+  }
+
+  .plate2 {
+    .illustration {
+      .color1 .color2 {
+        position: absolute;
+        left: 35%;
+        top: 47.5%;
+        transform: translate(-50%, -50%) rotate(-15deg);
+        width: 40%;
+        height: 50vh;
+        z-index: 3;
+      }
+      .color1 .color3 {
+        position: absolute;
+        left: 55%;
+        top: 55%;
+        transform: translate(-50%, -50%) rotate(10deg);
+        width: 40%;
+        height: 50vh;
+        z-index: 2;
+      }
+    }    
+  }
+
+  .plate3 {
+    .illustration {
+      .color1 .color2 {
+        position: absolute;
+        left: 10%;
+        top: 1%;
+        width: 30%;
+        height: 60vh;
+        z-index: 3;
+      }
+      .color1 .color4 {
+        position: absolute;
+        right: 1%;
+        bottom: 1%;
+        width: 30%;
+        height: 60vh;
+        z-index: 2;
+      }
+      .color1 .color3 {
+        position: absolute;
+        left: 1%;
+        bottom: 1%;
+        width: 25%;
+        height: 50vh;
+        z-index: 4;
+        overflow: hidden;
+      }
+      .color1 .color3_2 {
+        position: absolute;
+        right: 8%;
+        top: 2%;
+        width: 30%;
+        height: 55vh;
+        z-index: 4;
+        overflow: hidden;
+      }
+    }    
+  }
+
+  .plate4 {
+    .illustration {
+      .color1 .color2 {
+        position: absolute;
+        left: 40%;
+        top: 20vh;
+        width: 25%;
+        height: 45vh;
+        z-index: 3;
+        transform: rotate(45deg);
+      }
+      .color1 .news {
+        position: absolute;
+        left: 20%;
+        top: 17.5vh;
+        width: 30%;
+        height: 45vh;
+        z-index: 2;
+        overflow: hidden;
+        transform: rotate(45deg);
+        img {
+          width: 100%;
+        }
+      }
+    }    
+  }  
+
+}

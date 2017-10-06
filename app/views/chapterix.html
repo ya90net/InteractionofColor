@@ -1,0 +1,98 @@
+<!-- chapterIX -->
+<div id="chapterIX" class="chapter row" ng-controller="ChapterixCtrl">
+<h2>Color mixture in paper --- illusion of transparence</h2>
+
+<!-- plate1 -->
+<div class="plate1 plate">
+  <div class="pallet row">
+
+	<div class="col-4" ng-repeat="color in plate1">
+	  <div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
+	</div>
+
+  </div>
+
+  <div class="illustration row">
+  	<div class="color1 col-12" ng-style="{'background-color': plate1.color1.color}"></div>
+
+  	<div class="color3 col-12" ng-style="{'background-color': plate1.color3.color}"></div>
+  	<div class="color2 col-12" ng-style="{'background-color': plate1.color2.color}"></div>
+
+  </div>
+</div>
+<!-- plate1 -->
+
+
+<!-- plate2 -->
+<div class="plate2 plate">
+	<div class="pallet row">
+
+		<div class="col-4" ng-repeat="color in plate2">
+			<div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
+	  	</div>
+
+	</div>
+
+  <div class="illustration row">
+	<div class="color1 col-12" ng-style="{'background-color': plate2.color1.color}">
+	  <div class="color2" ng-style="{'background-color': plate2.color2.color}"></div>
+	  <div class="color3" ng-style="{'background-color': plate2.color3.color}"></div>
+	</div>
+  </div>
+</div>
+<!-- plate2 -->
+
+
+<!-- plate3 -->
+<div class="plate3 plate">
+	<div class="pallet row">
+
+		<div class="col-3" ng-repeat="color in plate3">
+			<div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
+	  	</div>
+
+	</div>
+
+  <div class="illustration row">
+	<div class="color1 col-12" ng-style="{'background-color': plate3.color1.color}">
+	  <div class="color2" ng-style="{'background-color': plate3.color2.color}"></div>	  
+	  <div class="color4" ng-style="{'background-color': plate3.color4.color}"></div>
+
+	  <div class="color3" ng-style="{'background-color': plate3.color3.color}">
+	  	<img src="images/white-leather.png"><br>
+	  </div>
+
+	  <div class="color3_2" ng-style="{'background-color': plate3.color3.color}">
+	  	<img src="images/white-leather.png"><br>
+	  </div>
+	</div>
+  </div>
+</div>
+<!-- plate3 -->
+
+
+<!-- plate4 -->
+<div class="plate4 plate">
+	<div class="pallet row">
+
+		<div class="col-6" ng-repeat="color in plate4">
+			<div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
+	  	</div>
+
+	</div>
+
+  <div class="illustration row">
+	<div class="color1 col-12" ng-style="{'background-color': plate4.color1.color}">
+	  <div class="color2" ng-style="{'background-color': plate4.color2.color}"></div>
+
+	  <div class="news col-4">
+	  	<img src="images/newspaper.png"><br>
+	  </div>
+
+	</div>
+  </div>
+</div>
+<!-- plate4 -->
+
+</div>
+<!-- chapterIX -->
