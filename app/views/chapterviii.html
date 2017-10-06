@@ -1,25 +1,25 @@
-<!-- chapterVII -->
-<div id="chapterVII" class="chapter row" ng-controller="ChapterviiCtrl">
-<h2>2 different colors look alike --- subtraction of color</h2>
+<!-- chapterVIII -->
+<div id="chapterVIII" class="chapter row" ng-controller="ChapterviiiCtrl">
+<h2>Why color deception --- after-image, simultaneous contrast</h2>
 
 <!-- plate1 -->
 <div class="plate1 plate">
   <div class="pallet row">
 
-	<div class="col-3" ng-repeat="color in plate1">
+	<div class="col-4" ng-repeat="color in plate1">
 	  <div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
 	</div>
 
   </div>
 
   <div class="illustration row">
-	<div class="color1 col-6" ng-style="{'background-color': plate1.color1.color}">
-	  <div class="color2" ng-style="{'background-color': plate1.color2.color}"></div>
-	  <div class="color3" ng-style="{'background-color': plate1.color3.color}"></div>
-	</div>
-	<div class="color4 col-6" ng-style="{'background-color': plate1.color4.color}">
-	  <div class="color3" ng-style="{'background-color': plate1.color3.color}"></div>
-	  <div class="color2" ng-style="{'background-color': plate1.color2.color}"></div>
+	<div class="color2 col-12" ng-style="{'background-color': plate1.color2.color}">
+	  <div class="color1" ng-style="{'background-color': plate1.color1.color}">
+	  	<div class="dot"></div>
+	  </div>
+	  <div class="color3" ng-style="{'background-color': plate1.color3.color}">
+	  	<div class="dot"></div>
+	  </div>
 	</div>
   </div>
 </div>
@@ -30,28 +30,31 @@
 <div class="plate2 plate">
 	<div class="pallet row">
 
-		<div class="col-3" ng-repeat="color in plate2">
+		<div class="col-4" ng-repeat="color in plate2">
 			<div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
 	  	</div>
 
 	</div>
 
-	<div class="illustration row"　>
-		
-		<div class="color1 col-6" ng-style="{'background-color': plate2.color1.color}">
-			<div class="color2" ng-style="{'background-color': plate2.color2.color}"></div>
-		</div>
-
-		<div class="color4 col-6" ng-style="{'background-color': plate2.color4.color}">
-			<div class="color3" ng-style="{'background-color': plate2.color3.color}"></div>
-		</div>
-
-		<div class="bar">
-			<div class="color2" ng-style="{'background-color': plate2.color2.color}"></div>
-			<div class="color3" ng-style="{'background-color': plate2.color3.color}"></div>
-		</div>
-
+  <div class="illustration row">
+	<div class="color3 col-12" ng-style="{'background-color': plate2.color3.color}">
+	  <div class="color2" ng-style="{'background-color': plate2.color2.color}">
+	  	<div class="color1" ng-style="{'background-color': plate2.color1.color}"></div>
+	  	<div class="color1" ng-style="{'background-color': plate2.color1.color}"></div>
+	  	<div class="color1" ng-style="{'background-color': plate2.color1.color}"></div>
+	  	<div class="color1" ng-style="{'background-color': plate2.color1.color}"></div>
+	  	<div class="color1" ng-style="{'background-color': plate2.color1.color}"></div>
+	  	<div class="color1" ng-style="{'background-color': plate2.color1.color}"></div>
+	  	<div class="color1" ng-style="{'background-color': plate2.color1.color}"></div>
+	  	<div class="color1" ng-style="{'background-color': plate2.color1.color}"></div>
+	  	<div class="color1" ng-style="{'background-color': plate2.color1.color}"></div>
+	  	<div class="dot"></div>
+	  </div>
+	  <div class="color2 color2_2" ng-style="{'background-color': plate2.color2.color}">
+	  	<div class="dot"></div>
+	  </div>
 	</div>
+  </div>
 </div>
 <!-- plate2 -->
 
@@ -116,4 +119,4 @@
 <!-- plate4 -->
 
 </div>
-<!-- chapterVII -->
+<!-- chapterVIII -->

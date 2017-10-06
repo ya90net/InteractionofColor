@@ -50,6 +50,11 @@ angular
         controller: 'ChapterviiCtrl',
         controllerAs: 'chapterVII'
       })
+      .when('/chapterVIII', {
+        templateUrl: 'views/chapterviii.html',
+        controller: 'ChapterviiiCtrl',
+        controllerAs: 'chapterVIII'
+      })
       .otherwise({
         redirectTo: '/'
       });

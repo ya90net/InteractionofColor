@@ -1,0 +1,65 @@
+#chapterVIII {
+
+  .plate1 {
+    .illustration {
+      .color2 .color1,
+      .color2 .color3 {
+        position: absolute;
+        left: 25%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 45vmin;
+        height: 45vmin;
+        border-radius: 50%;
+        .dot {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 2px;
+          height: 2px;
+          border-radius: 50%;
+          background-color: #000;
+        }
+      }
+      .color2 .color3 {
+        left: 75%;
+      }
+    }    
+  }
+
+  .plate2 {
+    .illustration {
+      .color3 .color2 {
+        position: absolute;
+        left: 25%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 45vmin;
+        height: 45vmin;
+        .dot {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 2px;
+          height: 2px;
+          background-color: #000;
+          border-radius: 50%;
+        }
+        .color1 {
+          position: relative;
+          float: left;
+          width: calc(100% / 3);
+          height: calc(100% / 3);
+          border-radius: 50%;
+        }
+      }
+      .color3 .color2_2 {
+        left: 75%;
+      }
+    }    
+  }
+
+
+}
