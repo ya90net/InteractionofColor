@@ -1,0 +1,119 @@
+<!-- chapterXI -->
+<div id="chapterXI" class="chapter row" ng-controller="ChapterxiCtrl">
+<h2>Why color deception --- after-image, simultaneous contrast</h2>
+
+<!-- plate1 -->
+<div class="plate1 plate">
+  <div class="pallet row">
+
+	<div class="col-4" ng-repeat="color in plate1">
+	  <div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
+	</div>
+
+  </div>
+
+  <div class="illustration row">
+	<div class="color1 col-12" ng-style="{'background-color': plate1.color3.color}">
+		<div class="cover">
+			<div class="color2" ng-style="{'background-color': plate1.color2.color}">
+				<div class="cover2">
+					<div ng-repeat="color in mixed" class="color3" ng-style="{'background-color': color }"></div>
+				</div>
+			</div>
+			<div class="cover2">
+				<div ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7, 8]" class="color3" ng-style="{'background-color': plate1.color1.color}"></div>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+<!-- plate1 -->
+
+
+<!-- plate2 -->
+<div class="plate2 plate">
+	<div class="pallet row">
+
+		<div class="col-6" ng-repeat="color in plate2">
+			<div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
+	  	</div>
+
+	</div>
+
+  	<div class="illustration row">
+	  	<div class="col-12">
+	  		<div class="cover" ng-repeat="mixed in mixed2">
+	  			<div class="color1" ng-style="{'background-color': plate2.color1.color}"></div>
+	  			<div class="color2" ng-style="{'background-color': plate2.color2.color}"></div>
+	  			<div class="mix" ng-style="{'background-color': mixed }"></div>
+	  		</div>
+	  	</div>
+  	</div>
+</div>
+<!-- plate2 -->
+
+
+<!-- plate3 -->
+<div class="plate3 plate">
+  <div class="pallet row">
+
+	<div class="col-4" ng-repeat="color in plate3">
+	  <div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
+	</div>
+
+  </div>
+
+  <div class="illustration row">
+	<div class="color1 col-12" ng-style="{'background-color': plate3.color3.color}">
+		<div class="cover">
+			<div class="color2" ng-style="{'background-color': plate3.color2.color}">
+				<div class="cover2">
+					<div ng-repeat="color in mixed3" class="color3" ng-style="{'background-color': color }"></div>
+				</div>
+			</div>
+			<div class="cover2">
+				<div ng-repeat="i in [0, 1, 2]" class="color3" ng-style="{'background-color': plate3.color1.color}"></div>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+<!-- plate3 -->
+
+
+<!-- plate4 -->
+<div class="plate4 plate">
+	<div class="pallet row">
+
+		<div ng-repeat="color in plate4" ng-class="{ 'col-4' : !$last, 'col-12' : $last }">
+			<div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
+	  	</div>
+
+	</div>
+
+  	<div class="illustration row">
+	  	<div class="col-12">
+	  		<div class="cover">
+	  			<div class="color1" ng-style="{'background-color': plate4.color1.color}"></div>
+	  			<div class="color2" ng-style="{'background-color': plate4.color2.color}"></div>
+	  			<div class="color3" ng-style="{'background-color': plate4.color3.color}"></div>
+
+	  			<div class="cover2">
+					<div class="color4" ng-style="{'background-color': plate4.color4.color}">
+						<div ng-repeat="color in mixed4_1" class="mix" ng-style="{'background-color': color }"></div>
+					</div>
+					<div class="color4" ng-style="{'background-color': plate4.color4.color}">
+						<div ng-repeat="color in mixed4_2" class="mix" ng-style="{'background-color': color }"></div>
+					</div>
+					<div class="color4" ng-style="{'background-color': plate4.color4.color}">
+						<div ng-repeat="color in mixed4_3" class="mix" ng-style="{'background-color': color }"></div>
+					</div>	  			
+				</div>
+	  		</div>
+	  	</div>
+  	</div>
+</div>
+<!-- plate4 -->
+
+</div>
+<!-- chapterXI -->
