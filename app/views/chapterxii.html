@@ -1,0 +1,40 @@
+<!-- chapterXII -->
+<div id="chapterXII" class="chapter row" ng-controller="ChapterxiiCtrl">
+<h2>Optical mixture --- after-image revised</h2>
+
+<!-- plate1 -->
+<div class="plate1 plate">
+  <div class="pallet row">
+
+	<div ng-repeat="color in plate1" ng-class="{ 'col-4' : !$last, 'col-12' : $last }">
+	  <div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
+	</div>
+
+  </div>
+
+  <div class="illustration row">
+	<div class="color1 col-12" ng-style="{'background-color': plate1.color4.color}">
+		
+		<div class="cover cover1">
+			<div ng-repeat="circle in circles1 track by $index" class="color color1" ng-style="{'background-color': plate1.color1.color}">
+				<div class="inner_circle" ng-style="{'background-color': plate1.color{{circle}}.color}"></div>
+			</div>
+		</div>
+		<div class="cover cover2">
+			<div ng-repeat="circle in circles2 track by $index" class="color color2" ng-style="{'background-color': plate1.color2.color}">
+				<div class="inner_circle" ng-style="{'background-color': plate1.color{{circle}}.color}"></div>
+			</div>
+		</div>
+		<div class="cover cover3">
+			<div ng-repeat="circle in circles3 track by $index" class="color color3" ng-style="{'background-color': plate1.color3.color}">
+				<div class="inner_circle" ng-style="{'background-color': plate1.color{{circle}}.color}"></div>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+<!-- plate1 -->
+
+
+</div>
+<!-- chapterXII

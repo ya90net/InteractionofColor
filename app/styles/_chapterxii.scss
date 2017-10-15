@@ -1,0 +1,33 @@
+#chapterXII {
+
+  .plate1 {
+    .illustration {
+      height: 60vh;
+      font-size: 0;
+      text-align: center;
+      > .color1 {
+        padding: 5vh 0;
+        .cover {
+          display: inline-block;
+          width: 40vh;
+          height: 50vh;
+          font-size: 0;
+          .color {
+            display: inline-block;
+            width: 5vh;
+            height: 5vh;
+            border-radius: 50%;
+            .inner_circle {
+              margin: 1.25vh;
+              width: 2.5vh;
+              height: 2.5vh;
+              background-color: #fff;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }    
+  }
+
+}
