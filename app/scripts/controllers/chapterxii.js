@@ -24,13 +24,7 @@ angular.module('interactionofColorApp')
 
 	$scope.circles1 = [];
 	$scope.circles2 = [];
-	$scope.circles3 = [];
-
-	function decideInnerColor(i, colorNumber1, colorNumber2, colorNumber3) {
-		$scope.circles1[i] = colorNumber1;	
-		$scope.circles2[i] = colorNumber2;
-		$scope.circles3[i] = colorNumber3;
-	}
+	$scope.circles3 = [];	
 
 	for (var i = 0; i < 80; i++) {
 		var remainder = i % 8;
@@ -44,5 +38,11 @@ angular.module('interactionofColorApp')
 			decideInnerColor(i, 3, 1, 3);
 		}
 	}	
+
+	function decideInnerColor(i, colorNumber1, colorNumber2, colorNumber3) {
+		$scope.circles1[i] = colorNumber1;	
+		$scope.circles2[i] = colorNumber2;
+		$scope.circles3[i] = colorNumber3;
+	}
 
   });
