@@ -1,0 +1,92 @@
+#chapterXIV {
+
+  .plate1 {
+    .illustration {
+      height: 75vh;
+      &:nth-child(2) {
+        margin-bottom: 24px;
+      }
+      .cover {
+        font-size: 0;
+        .color {
+          display: inline-block;
+          position: relative;
+          width: 50%;
+          height: 50%;
+        }
+        .small {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 50%;
+          height: 50%;
+        }
+      }
+    }    
+  }
+
+  .plate2 {
+    .pallet {
+      md-input-container {
+        margin-top: 0;
+      }
+      .md-color-picker-preview {
+        top: 5px;
+      }
+    }
+    .illustration {
+      height: 75vh;
+      &:nth-child(2) {
+        margin-bottom: 24px;
+      }
+      .cover {
+        font-size: 0;
+        .color {
+          display: inline-block;
+          position: relative;
+          width: 50%;
+          height: 50%;
+        }
+        .small {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 50%;
+          height: 40%;
+        }
+      }
+    }    
+  }
+
+
+  .plate3 {
+    .illustration {
+      padding: 8vh 5vh;
+      height: 75vh;
+      &:nth-child(2) {
+        margin-bottom: 24px;
+      }
+      .cover {
+        font-size: 0;
+        .color {
+          display: inline-block;
+          position: relative;
+          width: 50%;
+          height: 50%;
+        }
+        .small {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 50%;
+          height: 50%;
+        }
+      }
+    }  
+  }
+
+
+}
