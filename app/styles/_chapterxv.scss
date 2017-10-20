@@ -1,0 +1,143 @@
+#chapterXV {
+
+  .plate1,
+  .plate2 {
+    .illustration {
+      height: 65vh;
+      &:nth-child(2) {
+        margin-bottom: 24px;
+      }
+      .cover {
+        font-size: 0;
+        .color {
+          display: inline-block;
+          position: relative;
+          width: 50%;
+          height: 100%;
+        }
+        &.l {
+          position: relative;
+          left: 25%;
+          z-index: 2;
+          transition: left 2s linear;
+        }
+      }
+      &:hover {
+        .cover {
+          &.l {
+            left: 0;
+          }
+        }
+      }
+    }    
+  }
+
+
+  .plate3 {
+    .illustration {
+      padding: 8vh 5vh;
+      height: 75vh;
+      &:nth-child(2) {
+        margin-bottom: 24px;
+      }
+      .cover {
+        font-size: 0;
+        .color {
+          display: inline-block;
+          position: relative;
+          width: calc( 100% / 3 );
+          height: 100%;
+        }
+      }
+    }  
+  }
+
+
+ .plate4 {
+    .illustration {
+      margin-top: 20vh;
+      padding: 8vh 5vh;
+      // height: 75vh;
+      &:nth-child(2) {
+        margin-bottom: 24px;
+      }
+      .cover {
+        overflow: hidden; 
+        position: relative;
+        font-size: 0;
+        transform: rotate(45deg);
+        transform-origin: center;
+        .color {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+        .c1 {
+          position: absolute;
+          top: calc(-50% + 6.25%);
+          left: calc(100% - 0.25%);
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background-color: #fff;
+          z-index: 10;
+          &.c1_2 {
+            top: calc(-50% + 12.5% * 1 + 6.25%);
+          }
+          &.c1_3 {
+            top: calc(-50% + 12.5% * 2 + 6.25%);
+          }
+          &.c1_4 {
+            top: calc(-50% + 12.5% * 3 + 6.25%);
+          }
+        }
+        .c2 {
+          position: absolute;
+          left: calc(-50% + 6.25%);
+          top: calc(100% - 0.25%);
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background-color: #fff;
+          z-index: 10;
+          &.c2_2 {
+            left: calc(-50% + 12.5% * 1 + 6.25%);
+          }
+          &.c2_3 {
+            left: calc(-50% + 12.5% * 2 + 6.25%);
+          }
+          &.c2_4 {
+            left: calc(-50% + 12.5% * 3 + 6.25%);
+          }
+        }
+        .color1 {
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+        .color2 {
+          width: 87.5%;
+          height: 87.5%;
+          z-index: 2;
+        }
+        .color3 {
+          width: 75%;
+          height: 75%;
+          z-index: 3;
+        }
+        .color4 {
+          width: 62.5%;
+          height: 62.5%;
+          z-index: 4;
+        }
+        .color5 {
+          width: 50%;
+          height: 50%;
+          z-index: 5;
+        }
+      }
+    }  
+  }
+
+
+}
