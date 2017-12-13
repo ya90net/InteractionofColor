@@ -140,17 +140,135 @@
   .plate3 {
     .illustration {
       padding: 8vh 5vh;
-      height: 75vh;
+      height: 95vh;
       &:nth-child(2) {
         margin-bottom: 24px;
       }
       .cover {
         font-size: 0;
-        .color {
-          display: inline-block;
-          position: relative;
-          width: calc( 100% / 3 );
-          height: 100%;
+        > .color {
+          display: block;
+          position: absolute;
+          top: 4vmin;
+          width: 30vmin;
+          height: 30vmin;
+
+          border-width: 2vmin;
+          border-style: solid;
+          border-radius: 50%;
+
+          > .color {
+            display: block;
+            position: absolute;
+            left: 5.5vmin;
+            top: 5.5vmin;
+            width: 15vmin;
+            height: 15vmin;
+
+            border-width: 2vmin;
+            border-style: solid;
+            border-radius: 50%;
+
+            > .color {
+              display: block;
+              position: absolute;
+              position: absolute;
+              left: 3.5vmin;
+              top: 3.5vmin;
+              width: 4vmin;
+              height: 4vmin;
+              border-radius: 50%;
+            }
+          }
+        }
+
+        > .color1 {
+          left: 17vh;
+        }
+
+        > .color2 {
+          right: 17vh;
+        }
+
+
+        $size_l : 8vh;
+        $size_s : 4vh;
+
+        .corner {
+          position: absolute;
+          width: 0;
+          height: 0;
+          transform-origin: center center;
+          transform: rotate(135deg); 
+        }
+
+        &.cover1 {
+          margin-bottom: 16px;
+          overflow: hidden;
+          
+          .corner_lt {
+            left: -$size_l;
+            top:-$size_l;
+            border: $size_l solid transparent;
+            border-top: $size_l solid #f00;
+            
+          }
+
+          .corner_lb {
+            left: -$size_l;
+            bottom:-$size_l;
+            border: $size_l solid transparent;
+            border-bottom: $size_l solid #f00;
+          }
+
+          .corner_rt {
+            right: -$size_s;
+            top:-$size_s;
+            border: $size_s solid transparent;
+            border-top: $size_s solid #f00;
+          }
+
+          .corner_rb {
+            right: -$size_s;
+            bottom:-$size_s;
+            border: $size_s solid transparent;
+            border-bottom: $size_s solid #f00;
+          }
+
+        }
+
+        &.cover2 {
+          overflow: hidden;
+          
+          .corner_lt {
+            left: -$size_s;
+            top:-$size_s;
+            border: $size_s solid transparent;
+            border-top: $size_s solid #f00;
+            
+          }
+
+          .corner_lb {
+            left: -$size_s;
+            bottom:-$size_s;
+            border: $size_s solid transparent;
+            border-bottom: $size_s solid #f00;
+          }
+
+          .corner_rt {
+            right: -$size_l;
+            top:-$size_l;
+            border: $size_l solid transparent;
+            border-top: $size_l solid #f00;
+          }
+
+          .corner_rb {
+            right: -$size_l;
+            bottom:-$size_l;
+            border: $size_l solid transparent;
+            border-bottom: $size_l solid #f00;
+          }
+
         }
       }
     }  
