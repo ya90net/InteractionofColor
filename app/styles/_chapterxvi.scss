@@ -136,7 +136,6 @@
     }    
   }
 
-
   .plate3 {
     .illustration {
       padding: 8vh 5vh;
@@ -277,11 +276,23 @@
 
  .plate4 {
     .illustration {
-      margin-top: 20vh;
-      padding: 8vh 5vh;
+      overflow: visible;
+      margin-top: 20px;
       // height: 75vh;
-      &:nth-child(2) {
-        margin-bottom: 24px;
+
+      > .color {
+        overflow: visible;
+        position: relative;
+        width: 25%;
+        height: 100%;
+        z-index: 1;
+        > .color {
+          position: relative;
+          width: 100%;
+          height: calc(100% / 19 - 6px);
+          margin-bottom: 6px;
+          z-index: 2;
+        }
       }
       .cover {
         overflow: hidden; 

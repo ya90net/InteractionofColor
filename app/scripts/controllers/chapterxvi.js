@@ -43,11 +43,24 @@ angular.module('interactionofColorApp')
 
 	// plate4
 	$scope.plate4 = {
-		color1 : ColorPickerService.makeColorPicker("#ff9696"),
-		color2 : ColorPickerService.makeColorPicker("#f96868"),
-		color3 : ColorPickerService.makeColorPicker("#f23939"),
-		color4 : ColorPickerService.makeColorPicker("#e93030"),
-		color5 : ColorPickerService.makeColorPicker("#ba2323"),
+		color1 : ColorPickerService.makeColorPicker("#cdd9b6"),
+		color2 : ColorPickerService.makeColorPicker("#bc8bd5"),
+		color3 : ColorPickerService.makeColorPicker("#dd3636"),
+		color4 : ColorPickerService.makeColorPicker("#114f09"),
 	};
+
+	
+
+	// onLoad
+	angular.element(document).ready(function () {
+	    $(".plate4 .illustration > .color > .color").each(function(index, el) {
+	    	var min = 0 ;
+			var max = 20 ;
+			var rand = Math.floor( Math.random() * (max + 1 - min) ) + min ;
+	    	var left = rand - 10;
+	    	var rotate = Math.floor(rand / 4 - 2.5);
+			$(el).css({left: left + 'px', transform:'rotate(' + rotate + 'deg)'});
+		});
+	});
 
   });
