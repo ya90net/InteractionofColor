@@ -1,0 +1,31 @@
+<!-- chapterXX -->
+<div id="chapterXX" class="chapter row" ng-controller="ChapterxxCtrl">
+<h2>The Weber-Fechner Law --- the measure in mixture</h2>
+
+<!-- plate1 -->
+<div class="plate1 plate">
+  <div class="pallet row">
+
+	<div ng-repeat="color in plate1" class="col-12">
+	  <div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
+	</div>
+
+  </div>
+
+  <div class="illustration row">
+
+  	<div class="cover cover1">
+  		<div class="color color1" ng-style="{'background-color': plate1.color1.color}"></div>
+  		<div class="color color2" ng-style="{'background-color': plate1.color1.color}"></div>
+  		<div class="color color3" ng-style="{'background-color': plate1.color1.color}"></div>
+  		<div class="color color4" ng-style="{'background-color': plate1.color1.color}"></div>
+  	</div>
+
+  </div>
+
+</div>
+<!-- plate1 -->
+
+
+</div>
+<!-- chapterXX -->
