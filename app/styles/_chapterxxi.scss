@@ -1,0 +1,66 @@
+#chapterXXI {
+
+  .plate1 {
+    .illustration {
+      margin: 0 auto;
+      height: auto;
+      .cover {
+        margin-top: 2vh;
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+
+        > .box {
+          overflow: hidden;
+          width: 100%;
+          height: 15vh;
+          margin-bottom: 2vh;
+          font-size: 0;
+          > .color {
+            float: left;
+            width: 50%;
+            height: 100%;
+          }
+          &:hover {
+            > .color {
+              float: right;
+            }
+          }
+        }
+        > .color {
+          position: absolute;
+          display: block;
+          z-index: 2;
+          opacity: 0.75;
+          &.color1 {
+            left:20%;
+            top: 0;
+            width: 30%;
+            height: 80%;
+          }
+          &.color2 {
+            left:35%;
+            top: 20%;
+            width: 30%;
+            height: 80%;
+          }
+          &.color3 {
+            left:10%;
+            top: 30%;
+            width: 90%;
+            height: 30%;
+          }
+          &.color4 {
+            left:0%;
+            top: 45%;
+            width: 90%;
+            height: 30%;
+          }
+        }
+      }
+    }    
+  }
+
+}
