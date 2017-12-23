@@ -1,0 +1,165 @@
+#chapterXXII {
+
+  .plate1 {
+    .illustration {
+      margin: 0 auto;
+      height: auto;
+
+      .cover {
+        margin: 2vh auto 0;
+
+        position: relative;
+
+        width: 80vmax;
+        height: 45vmax;
+        font-size: 0;
+
+        .circle {
+          position: absolute;
+          border-width: 0.8vmax;
+          border-style: solid;
+          border-radius: 50%;
+        }
+
+
+        > .circle1 {
+          width: 30vmax;
+          height: 30vmax;
+
+          left: 14.5vmax;
+          top: 1vmax;
+          > .circle {
+            width: 24vmax;
+            height: 24vmax;
+            border-width: 0.7vmax;
+
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 1.2vmax;
+            > .circle {
+              width: 18vmax;
+              height: 18vmax;
+              border-width: 0.6vmax;
+
+              top: 50%;
+              transform: translateY(-50%);
+              right: 1.2vmax;
+              > .circle {
+                width: 14vmax;
+                height: 14vmax;
+                border-width: 0.5vmax;
+
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0.8vmax;
+                > .circle {
+                  width: 11vmax;
+                  height: 11vmax;
+                  border-width: 0.5vmax;
+
+                  top: 47.5%;
+                  transform: translateY(-50%);
+                  right: 0.8vmax;
+                  > .circle {
+                    width: 8.5vmax;
+                    height: 8.5vmax;
+                    border-width: 0.5vmax;
+
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    > .circle {
+                      width: 6vmax;
+                      height: 6vmax;
+                      border-width: 0.5vmax;
+
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+
+        > .circle2 {
+          width: 33vmax;
+          height: 33vmax;
+
+          right: 2vmax;
+          top: 8vmax;
+          > .circle {
+            width: 24vmax;
+            height: 24vmax;
+            border-width: 0.7vmax;
+
+            left: 50%;
+            top: 50%;
+            transform: translate(-42%, -42%);
+            > .circle {
+              width: 21vmax;
+              height: 21vmax;
+              border-width: 0.6vmax;
+
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              > .circle {
+                width: 18vmax;
+                height: 18vmax;
+                border-width: 0.5vmax;
+
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                > .circle {
+                  width: 12vmax;
+                  height: 12vmax;
+                  border-width: 0.5vmax;
+
+                  left: 50%;
+                  top: 50%;
+                  transform: translate(-40%, -40%);
+                }
+              }
+            }
+          }
+        }
+
+        > .circle3 {
+          width: 18vmax;
+          height: 18vmax;
+
+          left: 2vmax;
+          bottom: 1vmax;
+
+          border-width: 0.7vmax;
+
+          > .circle {
+            width: 13vmax;
+            height: 13vmax;
+            border-width: 0.7vmax;
+
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            > .circle {
+              width: 9vmax;
+              height: 9vmax;
+              border-width: 0.85vmax;
+
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+
+      }
+    }    
+  }
+
+}
