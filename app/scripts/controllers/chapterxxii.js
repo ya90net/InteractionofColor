@@ -21,4 +21,12 @@ angular.module('interactionofColorApp')
 	};
 
 
+	// plate3
+	$scope.plate2 = {
+		color1 : ColorPickerService.makeColorPicker("#1b2d68"),
+		color2 : ColorPickerService.makeColorPicker("#692333"),
+		color3 : ColorPickerService.makeColorPicker("#1b7187")
+	};
+
+
   });
