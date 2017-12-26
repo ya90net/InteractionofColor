@@ -1,0 +1,42 @@
+#chapterXXIII {
+
+  .plate1 {
+    .illustration {
+      margin: 0 auto;
+      height: auto;
+
+      .l,
+      .r {
+        width: 15vw;
+        font-size: 0;
+        .bar {
+          display: inline-block;
+          .box {
+            width: 7.5vw;
+            height: 7.5vw;
+            transform: skew(-20deg);
+          }
+
+          &.bar1 {
+            position: relative;
+            top: 7.5vw;
+          }
+        }
+      }
+
+      .l {
+        margin-left: 20vw;
+        .bar2 {
+          position: relative;
+          left: 2.8vw;
+        }
+      }
+
+      .r {
+        margin-left: 32vw;
+      }
+
+    }    
+  }
+
+}
