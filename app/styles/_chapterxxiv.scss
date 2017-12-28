@@ -1,0 +1,62 @@
+#chapterXXIV {
+
+  .plate1 {
+    .illustration {
+      overflow: hidden;
+      margin: 2vw auto 0;
+      height: auto;
+      width: 100%;
+
+      font-size: 0;
+
+      $size_tri : 7.5vw;
+      $size_tri2 : $size_tri * 1.732;
+
+      .tri {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 $size_tri $size_tri2 $size_tri;
+      }
+
+      .top {
+        position: relative;
+        width: 100%;
+        left: calc(50% - #{$size_tri} );
+      }
+
+      .mid {
+        position: relative;
+        width: 100%;
+        left: calc(50% - #{$size_tri * 2});
+
+        .tri2 {
+          position: absolute;
+          left: $size_tri;
+          transform: rotate(180deg);
+        }
+      }
+
+      .btm {
+        position: relative;
+        width: 100%;
+        left: calc(50% - #{$size_tri * 3});
+
+        .tri2 {
+          position: absolute;
+          left: $size_tri;
+          transform: rotate(180deg);
+        }
+
+        .tri4 {
+          position: absolute;
+          left: $size_tri * 3;
+          transform: rotate(180deg);
+        }
+      }
+
+    }    
+  }
+
+}
