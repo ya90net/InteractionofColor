@@ -12,7 +12,7 @@
 body, html {
     background: #fff;
 }
-body > .container {
+body > #panel > .container {
   box-sizing: border-box;
   padding: calc(59px + 58px) 15px 60px;
 }
@@ -23,7 +23,6 @@ body > .container {
 
 /* Nav */
 .navbar {
-  position: fixed;
   width: 100%;
   background-color: #24292e;
   padding: 0.8rem 1rem;
@@ -41,7 +40,8 @@ body > .container {
   transform: scale(0.52, .5);
   transform-origin: left top;
 }
-.form-control {
+
+.index {
   width: 162px !important;
   height: 32px;
   padding: 0 1rem;
@@ -53,37 +53,20 @@ body > .container {
   background-color: rgba(255,255,255,0.01);
   background-clip: unset; 
   border: 1px solid #fff;
-}
-input::-webkit-input-placeholder {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-  color: rgba(255,255,255,0.95) !important;
   text-align: right;
-  letter-spacing: 0.333em;
+  span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: rgba(255,255,255,0.95) !important;
+    letter-spacing: 0.333em;
+    line-height: 30px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
-input:-ms-input-placeholder {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-  color: rgba(255,255,255,0.95) !important;
-  text-align: right;
-  letter-spacing: 0.333em;
-}
-input::-moz-placeholder {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-  color: rgba(255,255,255,0.95) !important;
-  text-align: right;
-  letter-spacing: 0.333em;
-}
-.form-control:focus {
-  color: #fff;
-  background-color: rgba(255,255,255,0.1);
-  border-color: #fff;
-}
-.form-inline .btn{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-}
+
 @media (max-width: 768px){
   .navbar-brand{
     display: block;
@@ -95,12 +78,6 @@ input::-moz-placeholder {
   }
 }
 
-nav .index {
-    position: absolute;
-    background-color: rgba(255,255,255,0.75);
-    right: 0;
-    top: 0;
-}
 
 
 /* container */
@@ -129,6 +106,9 @@ nav .index {
 
 
 
+
+/* sidebar */
+@import "sidebar";
 
 
 

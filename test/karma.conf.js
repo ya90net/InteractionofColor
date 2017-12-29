@@ -33,6 +33,8 @@ module.exports = function(config) {
       'bower_components/angular-material/angular-material.js',
       'bower_components/md-color-picker/dist/mdColorPicker.js',
       'bower_components/chroma-js/chroma.js',
+      'bower_components/emitter-es6/browser/index.js',
+      'bower_components/slideout.js/dist/slideout.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
