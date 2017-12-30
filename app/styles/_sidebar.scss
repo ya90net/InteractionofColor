@@ -14,8 +14,29 @@ body {
   z-index: 0;
   display: none;
 
-  padding: 16px 0;
-  background-color: #24292e;
+  padding: 8px 16px;
+  background-color: #000;
+
+  ul {
+    li {
+      a {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        letter-spacing: 0.133em;
+        color: #fff;
+
+        &.nav-link {
+          padding: 0.5rem 2rem;
+        }
+      }
+
+      &:first-child {
+        .nav-link {
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+  }
 }
 
 .slideout-menu-left {

@@ -1,12 +1,17 @@
 .chapter {
+
   .plate, .pallet, .illustration {
     position: relative;
     width: 100%;
     margin: 0;
   }
+
   .plate {
-    margin: 0 0 100px;
+    margin: 0 0 240px;
+
     .pallet {
+      margin: 0 0 1em;
+      
       md-input-container {
         margin-bottom: 0;
       }
@@ -14,8 +19,13 @@
         display: none;
       }
     }
+
     .illustration {
       height: 80vh;
+    }
+
+    &:last-child {
+      margin: 0 0 120px;
     }
   }
 }
