@@ -30,8 +30,8 @@ function wave(){
 	var height = '60px';
 	var retina = true;
 
-	var bgColor     = '#24292e';
-	var lineColor   = '#ffffff';
+	var bgColor     = '#ffffff';
+	var lineColor   = '#24292e';
 	var borderColor = '#ffffff';
 
 	var style = 'border:2px solid ' + borderColor + ';\
