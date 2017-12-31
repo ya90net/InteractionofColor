@@ -2,18 +2,22 @@
 
   .plate1 {
     .illustration {
+
+      height: 68vh;
+
       .color1 {
         height: 45vh;
       }
 
       .color3 {
         position: absolute;
-        width: calc(60% / 2);
+        width: 45vh;
         height: 45vh;
         transform: rotate(90deg);
         transform-origin: left;
         left: 50%;
       }
+
       .color2 {
         position: absolute;
         left: 50%;
@@ -22,11 +26,15 @@
         height: 22.5vh;
         transform: translateX(-50%);
       }
+
     }    
   }
 
   .plate2 {
     .illustration {
+
+      height: 80vh;
+
       .color1 .color2 {
         position: absolute;
         left: 35%;
@@ -50,6 +58,9 @@
 
   .plate3 {
     .illustration {
+
+      height: 80vh;
+
       .color1 .color2 {
         position: absolute;
         left: 10%;
@@ -84,11 +95,19 @@
         z-index: 4;
         overflow: hidden;
       }
+
+      .tex {
+        background: url(/images/white-leather.png) no-repeat;
+        background-size: cover;
+      }
     }    
   }
 
   .plate4 {
     .illustration {
+
+      height: 80vh;
+
       .color1 .color2 {
         position: absolute;
         left: 40%;
