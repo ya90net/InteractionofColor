@@ -1,146 +1,181 @@
 #chapterVI {
-  .plate1 .illustration {
-    .color1, .color3 {
-      position: relative;
-      overflow: hidden;
-    }
-    .color1 .color2.l, .color3 .color2.l {
-      position: absolute;
-      left: calc(50% - 0.75vw);
-      width: 1.5vw;
-      height: 100%;
-      padding: 0;
-      margin: 0;
-      transform: rotate(45deg);
-    }
-    .color1 .color2.r, .color3 .color2.r {
-      position: absolute;
-      left: calc(50% - 0.75vw);
-      width: 1.5vw;
-      height: 100%;
-      padding: 0;
-      margin: 0;
-      transform: rotate(-45deg);
-    }
-    .color2.h {
-      position: absolute;
-      left: calc(50% - 7.5vw);
-      top: 13.3%;
-      width: 15vw;
-      height: 1.5vw;
-    }
-  }
-  .plate2 .illustration {
-    .color1, .color3 {
-      position: relative;
-    }
-    .color2 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 5vw;
-      height: 5vw;
-      padding: 0;
-      transform: translate(-50%, -50%);
-    }
-  }
-  .plate3 .illustration .color1, .plate4 .illustration .color3 {
-    position: relative;
-  }
-  .plate3 .illustration {
-    .cover {
-      &.r {
-        overflow: hidden;
-        position: absolute;
-        top: 20%;
-        left: 10%;
-        width: 20vw;
-        height: 60%;
-        .color2 {
+
+  .plate1 {
+
+    .illustration {
+      height: 45vw;
+
+      .box {
+        position: relative;
+        overflow: visible;
+        height: 100%;
+
+        .line {
           position: absolute;
-          left: calc(-10vw + 10px);
-          box-sizing: border-box;
-          border-style: solid;
-          border-width: 10px;
-          &.lg {
-            border-radius: 0 20vw 20vw 0;
-            width: 20vw;
-            height: 100%;
+          left: 0;
+          top: calc(50% - 0.75vw);
+          width: 100%;
+          height: 1.5vw;
+          padding: 0;
+          margin: 0;
+          z-index: 10;
+          &.lineL {
+            transform: rotate(45deg);
           }
-          &.md {
-            top: 20px;
-            left: calc(-10vw + 10px);
-            border-radius: 0 calc(20vw - 20px) calc(20vw - 20px) 0;
-            width: calc(20vw - 20px);
-            height: calc(100% - 40px);
-          }
-          &.sm {
-            top: 40px;
-            left: calc(-10vw + 10px);
-            border-radius: 0 calc(20vw - 40px) calc(20vw - 40px) 0;
-            width: calc(20vw - 40px);
-            height: calc(100% - 80px);
-          }
-          &.core {
-            top: 60px;
-            left: calc(-10vw + 10px);
-            border-radius: 0 calc(20vw - 60px) calc(20vw - 60px) 0;
-            width: calc(20vw - 60px);
-            height: calc(100% - 120px);
+          &.lineR {            
+            transform: rotate(-45deg);
+
+            .lineBridge {
+                position: absolute;
+                left: 100%;
+                top: 0;
+                width: 31.5%;
+                height: 1.5vw;
+                transform: rotate(45deg);
+                transform-origin: left top;
+            }
           }
         }
       }
-      &.l {
-        overflow: hidden;
-        position: absolute;
-        top: 20%;
-        right: 10%;
-        width: 20vw;
-        height: 60%;
-        .color2 {
-          position: absolute;
-          right: calc(-10vw + 10px);
-          box-sizing: border-box;
-          border-style: solid;
-          border-width: 10px;
-          &.lg {
-            border-radius: 20vw 0 0 20vw;
-            width: 20vw;
-            height: 100%;
-          }
-          &.md {
-            top: 20px;
-            right: calc(-10vw + 10px);
-            border-radius: calc(20vw - 20px) 0 0 calc(20vw - 20px);
-            width: calc(20vw - 20px);
-            height: calc(100% - 40px);
-          }
-          &.sm {
-            top: 40px;
-            right: calc(-10vw + 10px);
-            border-radius: calc(20vw - 40px) 0 0 calc(20vw - 40px);
-            width: calc(20vw - 40px);
-            height: calc(100% - 80px);
-          }
-          &.core {
-            top: 60px;
-            right: calc(-10vw + 10px);
-            border-radius: calc(20vw - 60px) 0 0 calc(20vw - 60px);
-            width: calc(20vw - 60px);
-            height: calc(100% - 120px);
-          }
-        }
-      }
+
+      
+
     }
-    .borders {
-      position: absolute;
-      left: 45%;
-      top: 20%;
-      width: 10%;
+  }
+
+
+  .plate2 {
+
+    .illustration {
+      height: 80vh;
+      .color1, .color3 {
+        position: relative;
+      }
       .color2 {
-        border-top: solid 10px;
-        width: 100%;
-        padding-bottom: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5vw;
+        height: 5vw;
+        padding: 0;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+
+  .plate3 {
+
+    .illustration {
+
+    $borderWidth : 2vw;
+
+      height: #{$borderWidth * 25};
+
+      .box {
+        position: relative;
+      
+        .cover {
+          overflow: hidden;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 20vw;
+          height: #{$borderWidth * 14};
+
+        
+          .color2 {
+            
+            position: absolute;
+            box-sizing: border-box;
+            border-style: solid;
+            border-width: $borderWidth;
+            &.lg {
+              width: 20vw;
+              height: 100%;
+            }
+            &.md {
+              top: #{$borderWidth * 2};
+              width: calc(20vw - #{$borderWidth * 2});
+              height: calc(100% - #{$borderWidth * 4});
+            }
+            &.sm {
+              top: #{$borderWidth * 4};
+              width: calc(20vw - #{$borderWidth * 4});
+              height: calc(100% - #{$borderWidth * 8});
+            }
+            &.core {
+              top: #{$borderWidth * 6};
+              width: calc(20vw - #{$borderWidth * 6});
+              height: calc(100% - #{$borderWidth * 12});
+            }
+          }
+
+          &.r {
+            
+            left: 10%;
+            
+            .color2 {
+
+              left: calc(-10vw + 6vw);
+              
+              &.lg {
+                border-radius: 0 20vw 20vw 0;
+              }
+              &.md {
+                left: calc(-10vw + 6vw);
+                border-radius: 0 calc(20vw - 20px) calc(20vw - 20px) 0;
+              }
+              &.sm {
+                left: calc(-10vw + 6vw);
+                border-radius: 0 calc(20vw - 40px) calc(20vw - 40px) 0;
+              }
+              &.core {
+                left: calc(-10vw + 6vw);
+                border-radius: 0 calc(20vw - 60px) calc(20vw - 60px) 0;
+              }
+            }
+          }
+          &.l {
+
+            right: 10%;
+
+            .color2 {
+
+              right: calc(-10vw + 6vw);
+
+              &.lg {
+                border-radius: 20vw 0 0 20vw;
+              }
+              &.md {
+                right: calc(-10vw + 6vw);
+                border-radius: calc(20vw - 20px) 0 0 calc(20vw - 20px);
+              }
+              &.sm {
+                right: calc(-10vw + 6vw);
+                border-radius: calc(20vw - 40px) 0 0 calc(20vw - 40px);
+              }
+              &.core {
+                right: calc(-10vw + 6vw);
+                border-radius: calc(20vw - 60px) 0 0 calc(20vw - 60px);
+              }
+            }
+          }
+        }
+
+      }
+      .borders {
+        position: absolute;
+        left: 45%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10%;
+        height: #{$borderWidth * 14};
+        .color2 {
+          border-top: solid $borderWidth;
+          width: 100%;
+          padding-bottom: $borderWidth;
+        }
       }
     }
   }

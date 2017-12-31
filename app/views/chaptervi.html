@@ -14,17 +14,17 @@
 
 	<div class="illustration row">
 
-		<div class="color1 col-6" ng-style="{'background-color': plate1.color1.color}">
-			<div class="color2 l" ng-style="{'background-color': plate1.color2.color}"></div>
-			<div class="color2 r" ng-style="{'background-color': plate1.color2.color}"></div>
+		<div class="box color1 col-6" ng-style="{'background-color': plate1.color1.color}">
+			<div class="color2 lineL line" ng-style="{'background-color': plate1.color2.color}"></div>
+			<div class="color2 lineR line" ng-style="{'background-color': plate1.color2.color}">
+				<div class="color2 lineBridge" ng-style="{'background-color': plate1.color2.color}"></div>
+			</div>
 		</div>
 
-		<div class="color3 col-6" ng-style="{'background-color': plate1.color3.color}">
-			<div class="color2 l" ng-style="{'background-color': plate1.color2.color}"></div>
-			<div class="color2 r" ng-style="{'background-color': plate1.color2.color}"></div>
+		<div class="box color3 col-6" ng-style="{'background-color': plate1.color3.color}">
+			<div class="color2 lineL line" ng-style="{'background-color': plate1.color2.color}"></div>
+			<div class="color2 lineR line" ng-style="{'background-color': plate1.color2.color}"></div>
 		</div>
-
-		<div class="color2 h" ng-style="{'background-color': plate1.color2.color}"></div>
 	
 	</div>
 </div>
@@ -58,6 +58,7 @@
 
 <!-- plate3 -->
 <div class="plate3 plate">
+
 	<div class="pallet row">
 
 		<div class="col-4" ng-repeat="color in plate3">
@@ -68,7 +69,7 @@
 
 	<div class="illustration row" >
 
-	 	<div class="color1 col-6" ng-style="{'background-color': plate3.color1.color}">
+	 	<div class="box color1 col-6" ng-style="{'background-color': plate3.color1.color}">
 			
 			<div class="cover l">
 				<div class="color2 lg" ng-style="{'border-color': plate3.color2.color}"></div>
@@ -79,7 +80,7 @@
 
 		</div>
 
-		<div class="color3 col-6" ng-style="{'background-color': plate3.color3.color}">
+		<div class="box color3 col-6" ng-style="{'background-color': plate3.color3.color}">
 			<div class="cover r">
 				<div class="color2 lg" ng-style="{'border-color': plate3.color2.color}"></div>
 				<div class="color2 md" ng-style="{'border-color': plate3.color2.color}"></div>
