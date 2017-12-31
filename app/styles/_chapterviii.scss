@@ -2,14 +2,15 @@
 
   .plate1 {
     .illustration {
+      height: 70vh;
       .color2 .color1,
       .color2 .color3 {
         position: absolute;
         left: 25%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 45vmin;
-        height: 45vmin;
+        width: 40vmin;
+        height: 40vmin;
         border-radius: 50%;
         .dot {
           position: absolute;
@@ -30,13 +31,14 @@
 
   .plate2 {
     .illustration {
+      height: 70vh;
       .color3 .color2 {
         position: absolute;
         left: 25%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 45vmin;
-        height: 45vmin;
+        width: 40vmin;
+        height: 40vmin;
         .dot {
           position: absolute;
           left: 50%;
