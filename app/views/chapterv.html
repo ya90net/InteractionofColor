@@ -4,21 +4,26 @@
 
 <!-- plate1 -->
 <div class="plate1 plate">
+
 	<div class="pallet row">
-	  <div class="col-1"></div>
-	  <div class="col-4">
-		<div class="colorpicker" md-color-picker="plate1.color1.option" ng-model="plate1.color1.color"></div>
-	  </div>
-	  <div class="col-1"></div>
-	  <div class="col-1"></div>
-	  <div class="col-4">
-		<div class="colorpicker" md-color-picker="plate1.color2.option" ng-model="plate1.color2.color"></div>
-	  </div>
+
+	  	<div class="col-1"></div>
+
+		<div class="col-4">
+			<div class="colorpicker" md-color-picker="plate1.color1.option" ng-model="plate1.color1.color"></div>
+		</div>
+
+	  	<div class="col-2"></div>
+
+	  	<div class="col-4">
+			<div class="colorpicker" md-color-picker="plate1.color2.option" ng-model="plate1.color2.color"></div>
+	  	</div>
+
 	</div>
 
 	<div class="illustration row">
 
-		<div ng-repeat="color in plate1" class="color{{$index+1}}" ng-style="{'background-color': color.color}"></div>
+		<div ng-repeat="color in plate1" class="color{{$index+1}} square" ng-style="{'background-color': color.color}"></div>
 	
 	</div>
 </div>

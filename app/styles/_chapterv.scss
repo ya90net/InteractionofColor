@@ -1,30 +1,35 @@
 #chapterV {
 
   .plate1 .illustration {
-    height: 100vh;
+    margin: 9vw 0 0;
+    height: 32vw;
     text-align: center;
-    .color1, .color2 {
+
+    .square {
       position: absolute;
       width: 25vw;
       height: 25vw;
       padding: 0;
-      margin: 20vh 0 0;
       transform: rotate(45deg);
       transform-origin: center;
     }
+
     .color1 {
-      left: 16%;
+      left: calc(50% - 35vw);
     }
+
     .color2 {
-      right: 16%;
+      right: calc(50% - 35vw);
+      transition: right .3s linear;
     }
-    .color1 {
-      left: 16%;
-    }
+
     &:hover .color2 {
-      right: 36%;
+      right: calc(50% - 15vw);
     }
+
   }
+
+
   .plate2 .illustration {
     height: 75vh;
     .color2 {
@@ -36,6 +41,8 @@
       padding: 0;
     }
   }
+
+
   .plate3 .illustration {
     height: 85vh;
     .color2 {
@@ -47,12 +54,15 @@
       margin: 0 0 10vh;
     }
   }
+
+
   .plate4 {
+
     .illustration {
       padding-top: 10vh;
       div {
         position: relative;
-        height: 40vh;
+        height: 30vw;
       }
       .color1 {
         top: 0vh;
@@ -66,31 +76,35 @@
       }
       .color3 {
         top: -10vh;
+        left: -0.5vw;
         transform: rotate(0deg);
         z-index: 2;
       }
       .color4 {
-        top: 0vh;
-        transform: rotate(10deg);
+        top: 2vh;
+        transform: rotate(13deg);
         z-index: 3;
       }
       .color5 {
         top: -5vh;
-        transform: rotate(2deg);
+        transform: rotate(6deg);
         z-index: 4;
       }
       .color6 {
         top: 5vh;
-        transform: rotate(0deg);
+        left: -1vw;
+        transform: rotate(2deg);
         z-index: 3;
       }
       .color7 {
         top: 2.5vh;
-        transform: rotate(-2deg);
+        left: -1vw;
+        transform: rotate(-4deg);
         z-index: 2;
       }
       .color8 {
         top: 1vh;
+        left: -1vw;
         transform: rotate(2deg);
         z-index: 1;
       }
@@ -100,12 +114,14 @@
       opacity: 0;
     }
   }
+
+
   .plate5 {
     .illustration {
       padding-top: 10vh;
       div {
         position: relative;
-        height: 40vh;
+        height: 30vw;
       }
     }
     .color1 {
@@ -114,38 +130,43 @@
       z-index: 4;
     }
     .color2 {
-      top: 2vh;
+      top: 4vh;
+      left: -1vw;
       transform: rotate(0deg);
       z-index: 5;
     }
     .color3 {
-      top: 5vh;
-      transform: rotate(-2deg);
+      top: 9vh;
+      left: -2vw;
+      transform: rotate(-4deg);
       z-index: 4;
     }
     .color4 {
-      top: 4vh;
-      transform: rotate(5deg);
+      top: 6vh;
+      left: -2vw;
+      transform: rotate(8deg);
       z-index: 3;
     }
     .color5 {
-      top: -5vh;
-      transform: rotate(0deg);
+      top: -9vh;
+      left: -2vw;
+      transform: rotate(-2deg);
       z-index: 2;
     }
     .color6 {
       top: 1vh;
-      transform: rotate(0deg);
+      left: -3vw;
+      transform: rotate(-2deg);
       z-index: 1;
     }
     .color7 {
-      top: 1.5vh;
-      transform: rotate(4deg);
+      top: 0vh;
+      transform: rotate(5deg);
       z-index: 2;
     }
     .color8 {
-      top: 2vh;
-      transform: rotate(-2deg);
+      top: -3vh;
+      transform: rotate(-3deg);
       z-index: 1;
     }
     .pallet md-input-container {
