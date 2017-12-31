@@ -1,50 +1,65 @@
 #chapterVII {
-  .plate1 .illustration .color1 > .color2,
-  .plate1 .illustration .color4 > .color3 {
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 8%;
-    height: 12vh;
-  }
-  .plate1 .illustration .color1 > .color3,
-  .plate1 .illustration .color4 > .color2 {
-    position: absolute;
-    bottom: 2%;
-    width: 12%;
-    height: 6vh;
-  }
-  .plate1 .illustration .color1 > .color3 { right: 0; }
-  .plate1 .illustration .color4 > .color2 { left: 0; }
 
-  .plate2 .illustration {
-    padding-bottom: 40px;
-    .color1 > .color2,
-    .color4 > .color3 {
-      position: relative;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 8%;
-      height: 12vh;
+  .plate1 {
+
+    .illustration {
+
+      height: 70vh;
+
+      .color1 > .color2,
+      .color4 > .color3 {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 8%;
+        height: 12vh;
+      }
+      .color1 > .color3,
+      .color4 > .color2 {
+        position: absolute;
+        bottom: 2%;
+        width: 12%;
+        height: 6vh;
+      }
+      .color1 > .color3 { right: 0; }
+      .color4 > .color2 { left: 0; }
+
     }
-    .bar {
-      position: absolute;
-      left: calc(50% - 12.5vw);
-      bottom: 0;
-      width: 25vw;
-      height: 30px;
-      .color2, .color3 {
-        height: 15px;
+
+  }
+
+  .plate2 {
+
+    .illustration {
+
+      height: 70vh;
+      padding-bottom: 40px;
+      .color1 > .color2,
+      .color4 > .color3 {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 8%;
+        height: 12vh;
+      }
+      .bar {
+        position: absolute;
+        left: calc(50% - 12.5vw);
+        bottom: 0;
         width: 25vw;
+        height: 30px;
+        .color2, .color3 {
+          height: 15px;
+          width: 25vw;
+        }
       }
     }
   }
-  .plate3 .illustration .color1, .plate4 .illustration .color3 {
-    position: relative;
-  }
+
   .plate3 {
+
     .illustration {
       height: 60vh;
       .color1 .color2,
@@ -57,6 +72,7 @@
         transform: rotate(45deg);
       }
     }
+
     .illustration2 {
       height: 20vh;
       margin: 20vh 0 0;
@@ -73,13 +89,18 @@
         left: 0;
       }
     }
+
     .illustration3 {
       margin-top: 20px;
     }
+
   }
+
 
   .plate4 {
     .illustration {
+      height: 70vh;
+      
       .color1 > .color2,
       .color4 > .color3 {
         position: relative;
