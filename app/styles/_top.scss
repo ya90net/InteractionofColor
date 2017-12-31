@@ -1,0 +1,15 @@
+#top {
+	&.jumbotron {
+		border-radius: 0;
+	}
+
+	h1 {		
+
+		.title,
+		.author {
+			font-family: $FONT_3;
+    		letter-spacing: -0.05em;
+		}
+
+	}
+}

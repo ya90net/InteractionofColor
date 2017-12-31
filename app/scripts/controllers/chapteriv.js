@@ -17,7 +17,7 @@ angular.module('interactionofColorApp')
 	$scope.plate1 = {
 		color1 : ColorPickerService.makeColorPicker("#e63225"),
 		color2 : ColorPickerService.makeColorPicker("#81ac55"),
-		color3 : ColorPickerService.makeColorPicker("#26ADE4"),
+		color3 : ColorPickerService.makeColorPicker("#26ade4"),
 	};
 	
 	// plate2

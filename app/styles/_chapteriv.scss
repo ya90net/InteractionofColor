@@ -1,12 +1,20 @@
 #chapterIV {
-  .plate1 .illustration .color2 {
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 8%;
-    height: 12vh;
+
+  .plate1 {
+    .illustration {
+      height: 50vw;
+      .color2 {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 6vmax;
+        height: 12vh;
+      }
+    }
   }
+
   .plate2 .illustration {
     .color1, .color4 {
       height: 40vh;
@@ -37,34 +45,35 @@
       }
     }
   }
-  .plate3 .illustration {
-    > {
-      .color1, .color3 {
-        height: 40vh;
-      }
-    }
-    .color2 {
-      position: relative;
-      left: 10%;
-      top: 8vh;
-      width: 80%;
-      height: 24vh;
-      .row {
-        margin: 0 0 0 8.333333%;
-        padding-top: 3vh;
-      }
-    }
-    .color3 .row {
-      margin: 0 0 0 8.333333%;
-      padding-top: 3vh;
-    }
-    .color2 .row {
-      .color1, .color3 {
-        width: 10%;
-        height: 8vh;
+
+  .plate3  {
+    $squareSize : 5vw;
+    > .illustration {
+
+      > .box {
+        > .innerBox {
+          position: relative;          
+          width: #{$squareSize * 11};
+          padding: $squareSize 0;
+          margin: #{$squareSize * 2} auto;
+          > .squares {
+            overflow: hidden;
+            margin-bottom: $squareSize;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            > .square {
+              float: left;
+              width: $squareSize;
+              height: $squareSize;
+              margin-left: $squareSize;
+            }
+          }
+        }
       }
     }
   }
+
   .plate4 .illustration {
     .color1 {
       height: 20vh;
@@ -92,4 +101,5 @@
       }
     }
   }
+
 }

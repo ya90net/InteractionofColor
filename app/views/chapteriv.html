@@ -53,43 +53,28 @@
   </div>
 
   <div class="illustration row">
-	<div class="color1 col-12" ng-style="{'background-color': plate3.color1.color}">
-	  <div class="color2" ng-style="{'background-color': plate3.color2.color}">
-		
-		<div class="row" ng-repeat="i in [0, 1]">
-		  <div class="col-1"></div>
-		  <div class="color1 col-1" ng-style="{'background-color': plate3.color1.color}"></div>
-		  <div class="col-1"></div>
-		  <div class="color1 col-1" ng-style="{'background-color': plate3.color1.color}"></div>
-		  <div class="col-1"></div>
-		  <div class="color1 col-1" ng-style="{'background-color': plate3.color1.color}"></div>
-		  <div class="col-1"></div>
-		  <div class="color1 col-1" ng-style="{'background-color': plate3.color1.color}"></div>
-		  <div class="col-1"></div>
-		  <div class="color1 col-1" ng-style="{'background-color': plate3.color1.color}"></div>
-		  <div class="col-1"></div>
-		</div>
 
-	  </div>
-	</div>
-	<div class="color3 col-12" ng-style="{'background-color': plate3.color3.color}">
-	  <div class="color2" ng-style="{'background-color': plate3.color2.color}">
+	<div class="color1 col-12 box" ng-style="{'background-color': plate3.color1.color}">
+
+	  	<div class="color2 innerBox" ng-style="{'background-color': plate3.color2.color}">
 		
-		<div class="row" ng-repeat="i in [0, 1]">
-		  <div class="col-1"></div>
-		  <div class="color3 col-1" ng-style="{'background-color': plate3.color3.color}"></div>
-		  <div class="col-1"></div>
-		  <div class="color3 col-1" ng-style="{'background-color': plate3.color3.color}"></div>
-		  <div class="col-1"></div>
-		  <div class="color3 col-1" ng-style="{'background-color': plate3.color3.color}"></div>
-		  <div class="col-1"></div>
-		  <div class="color3 col-1" ng-style="{'background-color': plate3.color3.color}"></div>
-		  <div class="col-1"></div>
-		  <div class="color3 col-1" ng-style="{'background-color': plate3.color3.color}"></div>
-		  <div class="col-1"></div>
-		</div>
+			<div class="squares" ng-repeat="i in [0, 1, 2]">
+			  <div class="color1 square" ng-repeat="i in [0, 1, 2, 3, 4]" ng-style="{'background-color': plate3.color1.color}"></div>
+			</div>
+
+	  	</div>
+
+	</div>
+
+	<div class="color3 col-12 box" ng-style="{'background-color': plate3.color3.color}">
+
+	  	<div class="color2 innerBox" ng-style="{'background-color': plate3.color2.color}">
+		
+			<div class="squares" ng-repeat="i in [0, 1, 2]">
+			  	<div class="color1 square" ng-repeat="i in [0, 1, 2, 3, 4]" ng-style="{'background-color': plate3.color3.color}"></div>
+			</div>
  
-	  </div>
+	  	</div>
 	</div>
   </div>
 </div>

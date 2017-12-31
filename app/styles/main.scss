@@ -1,7 +1,14 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+
+$FONT_1 : 'Roboto', sans-serif;
+$FONT_2 : 'Helvetica', sans-serif;
+$FONT_3 : 'Helvetica-Bold', sans-serif;
+
+$color1 : #24292e;
+
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: $FONT_1;
   font-weight: 400;
 }
 *:focus {
@@ -20,51 +27,53 @@ body > #panel > .container {
 @media (min-width: 992px) { .container { max-width: 992px;  } }
 @media (min-width: 1200px){ .container { max-width: 1200px; } }
 
-/* Nav */
+/* Header Navi */
 .navbar {
   width: 100%;
   // background-color: #24292e;
   padding: 0.8rem 1rem;
   z-index: 99;
-}
-.navbar-brand{
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  padding: 0;
-  font-family: 'Helvetica-Bold', sans-serif;
-  font-size: 20px;
-  letter-spacing: -0.05em;
-  line-height: 1;
-  color: #24292e !important;
-}
 
-.index {
-  width: 162px !important;
-  height: 32px;
-  padding: 0 1rem;
-  font-size: 0.75em;
-  border-radius: 0;
-  line-height: 1.25;
-  letter-spacing: 0.1em;
-  background-clip: unset; 
-  border: 1px solid #24292e;
-  text-align: right;
-  span {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    color: #000 !important;
-    letter-spacing: 0.333em;
-    line-height: 30px;
+  .navbar-brand{
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    padding: 0;
+    font-size: 20px;
+    font-family: $FONT_3;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    color: $color1 !important;
   }
 
-  &:hover {
-    cursor: pointer;
-  }
-}
+  .index {
+    width: 162px !important;
+    height: 32px;
+    padding: 0 1rem;
+    font-size: 0.75em;
+    border-radius: 0;
+    line-height: 1.25;
+    letter-spacing: 0.1em;
+    background-clip: unset; 
+    border: 1px solid $color1;
+    text-align: right;
+    span {
+      font-family: $FONT_1;
+      font-weight: 300;
+      color: #000 !important;
+      letter-spacing: 0.333em;
+      line-height: 30px;
+    }
 
-#wave {
-  display: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  #wave {
+    display: none;
+  }
+
 }
 
 @media (max-width: 768px){
@@ -85,8 +94,8 @@ body > #panel > .container {
   h2 {
     width: 100%;
     text-align: center;
-    font-family: 'Helvetica', sans-serif;
-    color: #24292e !important;
+    font-family: $FONT_2;
+    color: $color1 !important;
     
     padding: 2rem 0 8rem;
   }
@@ -102,7 +111,7 @@ body > #panel > .container {
   a{
     display: block;
     color: #000;
-    font-family: 'Roboto', sans-serif;
+    font-family: $FONT_1;
     font-weight: 100;
   }
 }
@@ -117,6 +126,7 @@ body > #panel > .container {
 
 /* page styles */
 @import "chaptercommon";
+@import "top";
 @import "chapteriv";
 @import "chapterv";
 @import "chaptervi";
