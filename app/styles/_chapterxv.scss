@@ -54,7 +54,9 @@
 
 
  .plate4 {
+
     .illustration {
+      height: 50vmax;
       margin-top: 20vh;
       padding: 8vh 5vh;
       // height: 75vh;
@@ -64,6 +66,9 @@
       .cover {
         overflow: hidden; 
         position: relative;
+        width: 35vmax;
+        height: 35vmax;
+        margin: 0 auto;
         font-size: 0;
         transform: rotate(45deg);
         transform-origin: center;
