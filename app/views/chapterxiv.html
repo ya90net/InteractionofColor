@@ -65,7 +65,7 @@
 <div class="plate2 plate">
   <div class="pallet row">
 
-	<div ng-repeat="color in plate2" ng-class="{ 'col-3' : $index <= 3, 'col-4' : $index > 3}">
+	<div ng-repeat="color in plate2" ng-class="{ 'col-3' : $index <= 3, 'col-2' : $index > 3}">
 	  <div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
 	</div>
 
@@ -79,22 +79,9 @@
   		<div class="color color4" ng-style="{'background-color': plate2.color4.color}"></div>
   		<div class="small">
   			<div class="color color1" ng-style="{'background-color': plate2.color5.color}"></div>
-	  		<div class="color color2" ng-style="{'background-color': plate2.color8.color}"></div>
+	  		<div class="color color2" ng-style="{'background-color': plate2.color6.color}"></div>
 	  		<div class="color color3" ng-style="{'background-color': plate2.color11.color}"></div>
-	  		<div class="color color4" ng-style="{'background-color': plate2.color14.color}"></div>
-  		</div>
-  	</div>
-
-  	<div class="cover col-4">
-  		<div class="color color1" ng-style="{'background-color': plate2.color1.color}"></div>
-  		<div class="color color2" ng-style="{'background-color': plate2.color2.color}"></div>
-  		<div class="color color3" ng-style="{'background-color': plate2.color3.color}"></div>
-  		<div class="color color4" ng-style="{'background-color': plate2.color4.color}"></div>
-  		<div class="small">
-  			<div class="color color1" ng-style="{'background-color': plate2.color6.color}"></div>
-	  		<div class="color color2" ng-style="{'background-color': plate2.color9.color}"></div>
-	  		<div class="color color3" ng-style="{'background-color': plate2.color12.color}"></div>
-	  		<div class="color color4" ng-style="{'background-color': plate2.color15.color}"></div>
+	  		<div class="color color4" ng-style="{'background-color': plate2.color12.color}"></div>
   		</div>
   	</div>
 
@@ -105,8 +92,21 @@
   		<div class="color color4" ng-style="{'background-color': plate2.color4.color}"></div>
   		<div class="small">
   			<div class="color color1" ng-style="{'background-color': plate2.color7.color}"></div>
-	  		<div class="color color2" ng-style="{'background-color': plate2.color10.color}"></div>
+	  		<div class="color color2" ng-style="{'background-color': plate2.color8.color}"></div>
 	  		<div class="color color3" ng-style="{'background-color': plate2.color13.color}"></div>
+	  		<div class="color color4" ng-style="{'background-color': plate2.color14.color}"></div>
+  		</div>
+  	</div>
+
+  	<div class="cover col-4">
+  		<div class="color color1" ng-style="{'background-color': plate2.color1.color}"></div>
+  		<div class="color color2" ng-style="{'background-color': plate2.color2.color}"></div>
+  		<div class="color color3" ng-style="{'background-color': plate2.color3.color}"></div>
+  		<div class="color color4" ng-style="{'background-color': plate2.color4.color}"></div>
+  		<div class="small">
+  			<div class="color color1" ng-style="{'background-color': plate2.color9.color}"></div>
+	  		<div class="color color2" ng-style="{'background-color': plate2.color10.color}"></div>
+	  		<div class="color color3" ng-style="{'background-color': plate2.color15.color}"></div>
 	  		<div class="color color4" ng-style="{'background-color': plate2.color16.color}"></div>
   		</div>
   	</div>
