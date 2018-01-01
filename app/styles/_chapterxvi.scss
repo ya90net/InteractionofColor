@@ -148,9 +148,10 @@
         > .color {
           display: block;
           position: absolute;
-          top: 4vmin;
+          top: 50%;
           width: 30vmin;
           height: 30vmin;
+          transform: translateY(-50%);
 
           border-width: 2vmin;
           border-style: solid;
@@ -182,11 +183,11 @@
         }
 
         > .color1 {
-          left: 17vh;
+          left: calc(50% - 40vmin);
         }
 
         > .color2 {
-          right: 17vh;
+          right: calc(50% - 40vmin);
         }
 
 
@@ -278,7 +279,7 @@
     .illustration {
       overflow: visible;
       margin-top: 20px;
-      // height: 75vh;
+      height: 80vh;
 
       > .color {
         overflow: visible;
