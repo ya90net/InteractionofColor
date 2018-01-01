@@ -79,8 +79,7 @@ body > #panel > .container {
 @media (max-width: 768px){
   .navbar-brand{
     display: block;
-    width: 182%;
-    text-align: center;
+    width: 52%;
   }
   #wave {
     display: none;
@@ -91,14 +90,7 @@ body > #panel > .container {
 
 /* container */
 .container {
-  h2 {
-    width: 100%;
-    text-align: center;
-    font-family: $FONT_2;
-    color: $color1 !important;
-    
-    padding: 2rem 0 8rem;
-  }
+
 }
 
 

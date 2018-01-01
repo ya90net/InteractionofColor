@@ -1,5 +1,22 @@
 .chapter {
 
+  .chapterTitle {
+    width: 100%;
+    height: calc(100vh - 58px /*- 58px */- 64px);
+
+    h2 {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      top: calc(50% - 4rem);
+      transform: translateY(-50%);
+
+      text-align: center;
+      font-family: $FONT_2;
+      color: $color1 !important;
+    }
+  }
+
   .plate, .pallet, .illustration {
     position: relative;
     width: 100%;
