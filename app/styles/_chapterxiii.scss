@@ -2,6 +2,7 @@
 
   .plate1 {
     .illustration {
+      height: 47.5vw;
       .cover {
         > .color1,
         > .color2 {
@@ -11,9 +12,9 @@
           font-size: 0;
           .r {
             position: relative;
-            height: 5%;
+            height: 2.5vw;
             width: 120%;
-            margin-bottom: 5.5px;
+            margin-bottom: 0.5vw;
             white-space: nowrap;
             &:nth-child(odd) {
               left: -7.5%;
@@ -21,11 +22,14 @@
             &:nth-child(even) {
               left: calc(-2.5% + 3px);
             }
+            &:last-child {
+              margin-bottom: 0;
+            }
             .brick {
               display: inline-block;
-              width: 8%;
-              height: 100%;
-              margin: 0 5.5px 0 0;
+              width: 5vw;
+              height: 2.5vw;
+              margin: 0 0.5vw 0 0;
             }
           }
           .box {
@@ -42,11 +46,6 @@
   }
 
   .plate2 {
-        margin: 0 0 5px;
-  }
-
-  .plate2,
-  .plate3 {
     .illustration {
       height: 40vh;
       .cover {
@@ -93,8 +92,9 @@
     }    
   }
 
-  .plate4 {
+  .plate3 {
     .illustration {
+      height: 80vh;
       padding: 8vh 0;
       .cover {
         padding: 0;
@@ -124,15 +124,21 @@
               display: inline-block;
               width: 10vh;
               height: 10vh;
-              padding: 1vh;
+              padding: 1.3vh;
               margin: 0 4vh 0 0; 
               &:nth-child(odd){
                 position: relative;
                 top: -1vh;
+                .inner {
+                  transform: rotate(2deg);
+                }
               }
               &:nth-child(even){
                 width: 4vh;
                 height: 12vh;
+                .inner {
+                  transform: rotate(-2deg);
+                }
               }
               .inner {
                 height: 100%;

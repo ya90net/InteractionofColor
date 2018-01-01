@@ -39,25 +39,40 @@
 <div class="plate2 plate">
   <div class="pallet row">
 
-	<div ng-repeat="color in plate2" class="col-3">
+	<div ng-repeat="color in plate2" ng-class="{ 'col-6' : $index <= 1, 'col-4' : $index > 1}">
 	  <div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
 	</div>
 
   </div>
 
-  <div class="illustration row" ng-style="{'background-color': plate2.color1.color}">
+  <div class="illustration row mb-5" ng-style="{'background-color': plate2.color1.color}">
   	<div class="cover">
-  		<div class="color2 l" ng-style="{'background-color': plate2.color2.color}"></div>
-  		<div class="color2 r" ng-style="{'background-color': plate2.color2.color}"></div>
+  		<div class="color2 l" ng-style="{'background-color': plate2.color3.color}"></div>
+  		<div class="color2 r" ng-style="{'background-color': plate2.color3.color}"></div>
 
-  		<div ng-repeat="line in [0, 1, 2, 3, 4, 5, 6, 7]" class="box" ng-style="{'background-color': plate2.color2.color}">
-  			<div class="color3" ng-style="{'background-color': plate2.color3.color}">
-  				<div class="color4" ng-style="{'background-color': plate2.color4.color}"></div>
+  		<div ng-repeat="line in [0, 1, 2, 3, 4, 5, 6, 7]" class="box" ng-style="{'background-color': plate2.color3.color}">
+  			<div class="color3" ng-style="{'background-color': plate2.color4.color}">
+  				<div class="color4" ng-style="{'background-color': plate2.color5.color}"></div>
   			</div>	
   		</div>
   		
   	</div>
   </div>
+
+  <div class="illustration row" ng-style="{'background-color': plate2.color2.color}">
+    <div class="cover">
+      <div class="color2 l" ng-style="{'background-color': plate2.color3.color}"></div>
+      <div class="color2 r" ng-style="{'background-color': plate2.color3.color}"></div>
+
+      <div ng-repeat="line in [0, 1, 2, 3, 4, 5, 6, 7]" class="box" ng-style="{'background-color': plate2.color3.color}">
+        <div class="color3" ng-style="{'background-color': plate2.color4.color}">
+          <div class="color4" ng-style="{'background-color': plate2.color5.color}"></div>
+        </div>  
+      </div>
+      
+    </div>
+  </div>
+
 </div>
 <!-- plate2 -->
 
@@ -66,65 +81,38 @@
 <div class="plate3 plate">
   <div class="pallet row">
 
-	<div ng-repeat="color in plate3" class="col-3">
+	<div ng-repeat="color in plate3" ng-class="{ 'col-6' : $index == 2 || $index == 3, 'col-12' : $index != 2 && $index != 3 }">
 	  <div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
 	</div>
 
   </div>
 
   <div class="illustration row" ng-style="{'background-color': plate3.color1.color}">
-  	<div class="cover">
-  		<div class="color2 l" ng-style="{'background-color': plate3.color2.color}"></div>
-  		<div class="color2 r" ng-style="{'background-color': plate3.color2.color}"></div>
+  	<div class="col-1"></div>
 
-  		<div ng-repeat="line in [0, 1, 2, 3, 4, 5, 6, 7]" class="box" ng-style="{'background-color': plate3.color2.color}">
-  			<div class="color3" ng-style="{'background-color': plate3.color3.color}">
-  				<div class="color4" ng-style="{'background-color': plate3.color4.color}"></div>
-  			</div>	
+  	<div class="cover col-5">
+  		<div class="color2" ng-style="{'background-color': plate3.color2.color}">
+  			<div ng-repeat="row in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]" class="r">
+  				<div ng-repeat="brick in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" class="brick color3" ng-style="{'background-color': plate3.color3.color}">
+  					<div class="inner" ng-style="{'background-color': plate3.color5.color}"></div>
+  				</div>
+  			</div>
   		</div>
-  		
   	</div>
+  	<div class="cover col-5">
+  		<div class="color2" ng-style="{'background-color': plate3.color2.color}">
+  			<div ng-repeat="row in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]" class="r">
+  				<div ng-repeat="brick in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" class="brick color3" ng-style="{'background-color': plate3.color4.color}">
+  					<div class="inner" ng-style="{'background-color': plate3.color5.color}"></div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+
+  	<div class="col-1"></div>
   </div>
 </div>
 <!-- plate3 -->
-
-
-<!-- plate4 -->
-<div class="plate4 plate">
-  <div class="pallet row">
-
-	<div ng-repeat="color in plate4" ng-class="{ 'col-6' : $index == 2 || $index == 3, 'col-12' : $index != 2 && $index != 3 }">
-	  <div class="colorpicker" md-color-picker="color.option" ng-model="color.color"></div>
-	</div>
-
-  </div>
-
-  <div class="illustration row" ng-style="{'background-color': plate4.color1.color}">
-  	<div class="col-1"></div>
-
-  	<div class="cover col-5">
-  		<div class="color2" ng-style="{'background-color': plate4.color2.color}">
-  			<div ng-repeat="row in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]" class="r">
-  				<div ng-repeat="brick in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" class="brick color3" ng-style="{'background-color': plate4.color3.color}">
-  					<div class="inner" ng-style="{'background-color': plate4.color5.color}"></div>
-  				</div>
-  			</div>
-  		</div>
-  	</div>
-  	<div class="cover col-5">
-  		<div class="color2" ng-style="{'background-color': plate4.color2.color}">
-  			<div ng-repeat="row in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]" class="r">
-  				<div ng-repeat="brick in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" class="brick color3" ng-style="{'background-color': plate4.color4.color}">
-  					<div class="inner" ng-style="{'background-color': plate4.color5.color}"></div>
-  				</div>
-  			</div>
-  		</div>
-  	</div>
-
-  	<div class="col-1"></div>
-  </div>
-</div>
-<!-- plate4 -->
 
 
 </div>
